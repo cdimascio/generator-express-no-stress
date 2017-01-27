@@ -12,17 +12,17 @@ export class ExamplesService {
   }
 
   all() {
-    this._l.info('all()');
+    this._l.info('all()', 'fetch all examples');
     return Promise.resolve(examples);
   }
 
   byId(id) {
-    this._l.info(`byId(${id})`);
+    this._l.info(`byId(${id})`, `fetch example with id ${id}`);
     return this.all().then(r =>r[id]);
   }
 
   create(name) {
-    this._l.info(`create(${name})`);
+    this._l.info(`create(${name})`, 'create new example');
     examples.push({
       id: id++,
       name
