@@ -28,6 +28,7 @@ module.exports = class extends Generator {
           'package.json',
           'README.md',
           'server/routes.js',
+          'server/common/swagger/Api.yaml',
           'public/api/index.html',
           'public/index.html',
         ]
@@ -42,6 +43,11 @@ module.exports = class extends Generator {
             apiRoot: '/api/v1'
         }
         
+        this.fs.copy(
+          this.templatePath('.*'),
+          this.destinationRoot()
+        );
+
         files.forEach(f => {
           this.fs.copyTpl(
             this.templatePath(f),
