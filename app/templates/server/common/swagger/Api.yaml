@@ -17,6 +17,8 @@ definitions:
   ExampleBody:
     type: object
     title: example
+    required:
+      - name
     properties:
       name:
         type: string
@@ -36,7 +38,7 @@ paths:
         - Examples
       description: Create a new example
       parameters:
-        - name: name
+        - name: body
           in: body
           description: number of items to skip
           required: true
