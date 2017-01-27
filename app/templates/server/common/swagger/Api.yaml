@@ -13,12 +13,35 @@ consumes:
 produces:
   - application/json
 
+definitions:
+  ExampleBody:
+    type: object
+    title: example
+    properties:
+      name:
+        type: string
+        description: The example name
+
 paths:
   /examples:
     get:
       tags:
         - Examples
       description: Fetch all examples
+      responses:
+        200:
+          description: Returns all examples
+    post:
+      tags:
+        - Examples
+      description: Create a new example
+      parameters:
+        - name: name
+          in: body
+          description: number of items to skip
+          required: true
+          schema: 
+            $ref: "#/definitions/ExampleBody"
       responses:
         200:
           description: Returns all examples
@@ -37,4 +60,4 @@ paths:
         200:
           description: Return the example with the specified id
         404:
-          description: Example not found
+          description: Example not 

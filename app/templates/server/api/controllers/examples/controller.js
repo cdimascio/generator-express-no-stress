@@ -15,5 +15,11 @@ export class Controller {
         .then(r => res.json(r));
     }
   }
+
+  create(req, res) {
+    ExamplesService
+      .create(req.body.name)
+      .then(r => res.status(201).location(`/api/v1/examples/${r.id}`).end())
+  } 
 }
 export default new Controller();

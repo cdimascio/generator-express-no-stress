@@ -1,13 +1,24 @@
+let id = 0;
+const examples = [
+    { id: id++, name: 'example 0' }, 
+    { id: id++, name: 'example 1' }
+];
+
 export class ExamplesService {
   all() {
-    return Promise.resolve([
-      { id: 0, name: 'example 0' }, 
-      { id: 1, name: 'example 1' }
-    ]);
+    return Promise.resolve(examples);
   }
 
   byId(id) {
     return this.all().then(r =>r[id]);
+  }
+
+  create(name) {
+    examples.push({
+      id: id++,
+      name
+    })
+    return Promise.resolve({id});
   }
 }
 
