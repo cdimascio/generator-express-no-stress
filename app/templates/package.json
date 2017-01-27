@@ -4,7 +4,7 @@
   "description": "<%= description %>",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js | bunyan -o 'short'"
   },
   "dependencies": {
     "babel-register": "^6.14.0",
