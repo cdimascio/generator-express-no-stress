@@ -2,43 +2,6 @@
 
 Tired of scaffolding REST APIs? Sick of writing validation code for your APIs? No worries, this generator has you covered. It creates a brand new REST API server complete with interactive documentation, API request validation, structured logging, environment driven config, and solid separation of of concerns. Simply run this generator and smile.
 
-Provide a Swagger definition for your API and get...
-
-#### Interactive API Doc
-![](https://github.com/cdimascio/generator-express-no-stress/raw/master/assets/api-doc.png)
-
-
-#### API Validation!
-
-Add a Swagger definition
-
-```
-  ExampleBody:
-    type: object
-    title: example
-    required:
-      - name
-    properties:
-      name:
-        type: string
-        description: The example name
-```
-
-and reap the benefits
-
-![](https://github.com/cdimascio/generator-express-no-stress/raw/master/assets/api-validation.png)
-
-other goodies include...
-
-#### Structured Logging
-
-![](https://github.com/cdimascio/generator-express-no-stress/raw/master/assets/logging-raw.png)
-
-#### Structured Logging (Pretty)
-
-![](https://github.com/cdimascio/generator-express-no-stress/raw/master/assets/logging-pretty.png)
-
-
 
 ## Prequisites
 
@@ -56,6 +19,11 @@ other goodies include...
 
 `npm start`
 
+## Try
+- Interactive API doc at [http://localhost:3000/api](http://localhost:3000/api)
+- Static resources at [http://localhost:3000/api](http://localhost:3000/api)
+
+
 ## What you get!
 
 - [Express.js](www.expressjs.com) - Fast, unopinionated
@@ -66,11 +34,45 @@ other goodies include...
 - [SwaggerUI](http://swagger.io/) - dynamically generate beautiful documentation and sandbox from a Swagger-compliant API
 
 
+### API Validation
+
 Simply describe your APIs with Swagger and automagically get for free:
+- Interactive documentation
+- API validation
+
+#### Interactive API Doc
+![](https://github.com/cdimascio/generator-express-no-stress/raw/master/assets/interactive-doc1.png)
+
+
+#### API Validation!
+Oops! I the API caller forgot to pass a `name` field, no stress, we've got this!
+
+![](https://github.com/cdimascio/generator-express-no-stress/raw/master/assets/api-validation.png)
+
+
+### Structured Logging
+
+Structured logging out of the box! 
+
+#### raw
+
+![](https://github.com/cdimascio/generator-express-no-stress/raw/master/assets/logging-raw.png)
+
+#### pretty
+
+Structured logging pretty printed by default - great for dev!
+
+![](https://github.com/cdimascio/generator-express-no-stress/raw/master/assets/logging-pretty.png)
+
+### API Validation Example
+
+Simply describe your APIs with Swagger and automatically get:
 - API request validation
 - Interactive documentation
 
 ### example
+
+#### Swagger API spec
 
 ```json
 swagger: "2.0"
@@ -140,6 +142,8 @@ paths:
           description: Example not 
 
 ```
+
+#### Invoke a POST request via the Interactive doc
 
 ![](https://github.com/cdimascio/generator-express-no-stress/raw/master/assets/interactive-doc.png)
 
