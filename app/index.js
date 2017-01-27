@@ -25,6 +25,7 @@ module.exports = class extends Generator {
         const src = this.sourceRoot()
         const dest = this.destinationRoot()
         const files = [
+          '.env',
           'package.json',
           'README.md',
           'server/routes.js',
