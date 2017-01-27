@@ -1,0 +1,20 @@
+{
+  "name": "generator-express-no-stress",
+  "version": "1.0.0",
+  "description": "Express Generator with modern tools",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Carmine DiMascio <cdimascio@gmail.com> (https://github.com/cdimascio)",
+  "license": "MIT",
+  "dependencies": {
+    "yeoman-generator": "^1.1.0"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "express",
+    "generator",
+    "rest"
+  ]
+}

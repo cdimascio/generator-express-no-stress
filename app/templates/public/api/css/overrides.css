@@ -1,0 +1,128 @@
+
+.sub-header {
+    background-color: #ececec;
+}
+
+.api-form-container {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    align-items: center;
+}
+
+.api-selector-container {
+    margin-top: 5px;
+    background-color: #ECECEC;
+    height: 30px;
+    display: flex;
+    width: 90%;
+    justify-content: flex-start;
+    align-items: center;
+    /* padding-left: 50px; */
+    /* padding-right: 50px; */
+    border-bottom: solid 1px rgba(0,0,0,.1);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.api-form {
+    display: flex;
+    width: 100%;
+}
+
+.api-selector-container input {
+    font-size: 0.9em;
+    padding: 1px 0 2px 5px;
+    width: 100%;
+    margin: 0;
+}
+
+#explore {
+    text-align: center;
+    width: 100px;
+    padding: 3px 20px 3px 20px;
+    border: solid 1px rgb(34, 34, 34);
+    background-color: rgba(34, 34, 34, 0.5);
+    color: #f0f0f0;
+    text-decoration: none;
+    margin-left: 10px;
+    font-family: sans-serif;
+    font-size: .9em;
+}
+
+.input {
+    display: block;
+    float: none;
+}
+
+.input.bar-left {
+    /*display: inline-block;*/
+    /*flex: 3;*/
+    margin: 0 10px 0 2px;
+    width: 100%;
+}
+
+.input.bar-middle {
+    /*display: inline-block;*/
+    /*flex: 3;*/
+    margin: 0 2px 0 2px;
+    width: 100%;
+}
+
+.input.bar-right {
+    /*display: inline-block;*/
+    /*flex:1;*/
+    text-align: center;
+    margin: 4px 2px 0 2px;
+}
+
+@media (max-width: 600px) {
+    .api-selector-container {
+        /*margin-top:50px*/
+    }
+}
+
+.logo-img {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    padding-right: 10px;
+    margin-bottom: -5px;
+}
+
+.swagger-section #header {
+    padding: 5px 0 0 0;
+}
+
+.swagger-section #header form#api_selector .input a#explore {
+    display: block;
+    width: 50px;
+    margin-left: 0;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 20px;
+    font-size: .9em;
+    color: #222222;
+    background-color: #FFFFFF;
+    border: solid 1px rgba(34,34,34,.2);
+}
+
+.swagger-section #header form#api_selector .input input#input_baseUrl {
+     width: 100%;
+}
+
+.swagger-section #header form#api_selector .input input#input_apiKey {
+    width: 100%;
+}
+
+.swagger-section #header form#api_selector .input input {
+    font-size: 0.9em;
+    margin: 0;
+}
+
+.swagger-section #header form#api_selector .input {
+    display: block;
+    clear: none;
+    float: left;
+}
