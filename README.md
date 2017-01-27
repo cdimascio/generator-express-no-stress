@@ -3,15 +3,11 @@
 Tired of scaffolding REST APIs? Sick of writing validation code for your APIs? No worries, this generator has you covered. It creates a brand new REST API server complete with interactive documentation, API request validation, structured logging, environment driven config, and solid separation of of concerns. Simply run this generator and smile.
 
 
-## Prequisites
-
-`npm install yeoman-generator`
-
 ## Install
 
-`npm install generator-express-no-stress`
+`npm install -g yo generator-express-no-stress`
 
-## Generate 
+## Scaffold
 
 `yo express-no-stress`
 

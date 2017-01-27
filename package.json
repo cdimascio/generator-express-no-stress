@@ -1,6 +1,6 @@
 {
   "name": "generator-express-no-stress",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Express Generator with modern tools",
   "main": "app/index.js",
   "scripts": {
