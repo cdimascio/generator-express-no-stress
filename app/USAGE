@@ -1,0 +1,15 @@
+Description:
+    Creates a default ExpressJS app with Swagger
+
+Example:
+    yo express-no-stress [--yarn]
+
+    This will create:
+        myapp/.babelrc
+        myapp/.env
+        myapp/.gitignore
+        README.md
+        index.js
+        package.json
+        public/
+        server/
