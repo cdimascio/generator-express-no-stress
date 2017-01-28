@@ -7,6 +7,10 @@ Tired of scaffolding REST APIs? Sick of writing validation code for your APIs? N
 
 `npm install -g yo generator-express-no-stress`
 
+OR 
+
+`npm install -g yo generator-express-no-stress --yarn`
+
 ## Scaffold
 
 `yo express-no-stress`
