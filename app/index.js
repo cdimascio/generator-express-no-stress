@@ -1,29 +1,67 @@
 'use strict';
 
-var Generator = require('yeoman-generator');
+const Generator = require('yeoman-generator');
+const path = require('path');
 
 module.exports = class extends Generator {
+  constructor(args, opts) {
+    super(args, opts);
+    this.argument('appname', { type: String, required: false });
+    this.option('yarn');
+
+    this.useYarn = this.options.yarn;
+    this.name = 'myapp';
+    this.description = 'My cool app'
+    this.version = '1.0.0'
+    this.apiRoot = '/api/v1'
+  }
+
   initializing() {
-    console.log('initializing')
   }
 
   prompting() {
-    console.log('prompting');
+    const prompts = [{
+      type: 'input',
+      name: 'description',
+      message: `App description [${this.description}]`
+    },{
+      type: 'input',
+      name: 'apiRoot',
+      message: `API Root [${this.apiRoot}]`
+    },{
+      type: 'input',
+      name: 'apiVersion',
+      message: `Version [${this.version}]`
+    }];
+
+    if (!this.options.appname) {
+      prompts.unshift({
+        type: 'input',
+        name: 'name',
+        message: `App name [${this.name}]`
+      })
+    }
+    
+    return this.prompt(prompts)
+      .then(r => {
+        this.name = r.name ? r.name : this.name;
+        this.description = r.description ? r.description : this.description;
+        this.version = r.version ? r.version : this.version;
+        this.apiRoot = r.apiRoot ? r.apiRoot : this.apiRoot;
+      });
   }
 
   configuring() {
-    console.log('configuring');
   }
 
   default() {
-    console.log('default')
   }
 
   get writing() {
     return {
       appStaticFiles() {
         const src = this.sourceRoot()
-        const dest = this.destinationRoot()
+        const dest = this.destinationPath(this.name)
         const files = [
           '.env',
           'package.json',
@@ -32,46 +70,44 @@ module.exports = class extends Generator {
           'server/common/swagger/Api.yaml',
           'public/api/index.html',
           'public/index.html',
-        ]
+        ];
 
         this.fs.copy(src, dest)
-
-        const opts = {
-            name: 'myapp',
-            title: 'My App',
-            description: 'My App is cool!',
-            version: '1.0.0',
-            apiRoot: '/api/v1'
-        }
-        
         this.fs.copy(
           this.templatePath('.*'),
-          this.destinationRoot()
+          dest
         );
 
+        const opts = {
+            name: this.name,
+            title: this.name,
+            description: this.description,
+            version: this.version,
+            apiRoot: this.apiRoot
+        }
+      
         files.forEach(f => {
           this.fs.copyTpl(
             this.templatePath(f),
-            this.destinationPath(f), opts);
+            this.destinationPath(`${this.name}/${f}`), opts);
         });
       }
     }
   }
 
   conflicts() {
-    console.log('conflicts')
   }
 
   install() {
-    console.log('install')
-    this.npmInstall();
+    const appDir = path.join(process.cwd(), this.name);
+    process.chdir(appDir);
+    if (this.useYarn) {
+      this.yarnInstall();
+    } else {
+      this.npmInstall();
+    }
   }
 
   end() {
-    console.log('end')
-  }
-
-  custom() {
-    console.log('my custom')
   }
 }
