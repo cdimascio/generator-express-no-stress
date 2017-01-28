@@ -1,5 +1,5 @@
 Description:
-    Creates a default ExpressJS app with Swagger
+    Creates a default Swagger enabled ExpressJS app
 
 Example:
     yo express-no-stress [--yarn]
