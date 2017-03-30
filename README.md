@@ -1,6 +1,6 @@
 # generator-express-no-stress
 
-Create awesome Express applications with best of breed tech including ES.next via Babel, structured logging with Bunyan, API validation and interactive documentation via Swagger, environment based config, and Backpack powered builds. 
+Create awesome [Express.js](www.expressjs.com) applications with best of breed tech including ES.next via [Babel.js](https://babeljs.io/), structured logging with [Bunyan](https://github.com/trentm/node-bunyan), API validation and interactive documentation via [Swagger](http://swagger.io/), environment based config with [dotenv](https://github.com/motdotla/dotenv), and [Backpack](https://github.com/palmerhq/backpack) powered builds. 
 
 generator-express-no-stress gets you up and running in seconds. It's ridiculously easy to configure. Heck, just take the defaults! Start the server! Write code!
 
