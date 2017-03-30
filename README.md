@@ -1,4 +1,4 @@
-#generator-express-no-stress
+# generator-express-no-stress
 
 Create awesome Express applications with best of breed tech including ES.next via Babel, structured logging with Bunyan, API validation and interactive documentation via Swagger. 
 
