@@ -60,6 +60,7 @@ npm start
 , minimalist web framework for Node.js
 - [Babel.js](https://babeljs.io/) - Use new syntax, right now without waiting for support
 - [Bunyan](https://github.com/trentm/node-bunyan) - a simple and fast JSON logging module for node.js services
+- [dotenv](https://github.com/motdotla/dotenv) - Loads environment variables from .env for nodejs projects
 - [Backpack](https://github.com/palmerhq/backpack) -  a minimalistic build system for Node.js projects.
 - [Swagger](http://swagger.io/) - is a simple yet powerful representation of your RESTful API.
 - [SwaggerUI](http://swagger.io/) - dynamically generate beautiful documentation and sandbox from a Swagger-compliant API
