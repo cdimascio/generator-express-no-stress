@@ -2,11 +2,31 @@
 
 <%= description %>
 
-### Install It
-* `npm install`
+## Install It
+```
+npm install
+```
 
-### Run It
-* `npm start`
+## Run It
+#### Run in *development* mode:
+
+```
+npm run dev
+```
+
+#### Run in *production* mode:
+
+```
+npm compile
+npm start
+```
+
+#### Deploy to the Cloud
+e.g. CloudFoundry
+
+```
+cf push myapp
+```
 
 ### Try It
 * Point you're browser to [http://localhost:3000](http://localhost:3000)

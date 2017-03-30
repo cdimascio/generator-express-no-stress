@@ -1,23 +1,20 @@
 import express from 'express';
-import dotenv from 'dotenv';
 import * as path from 'path';
 import * as bodyParser from 'body-parser';
 import * as http from 'http';
 import * as os from 'os';
 import cookieParser from 'cookie-parser';
 import swaggerify from './swagger';
-import Logger,{configure} from 'bunyan-node-logger';
-dotenv.config();
-configure({
-  appId: process.env.APP_ID,
+import bunyan from 'bunyan';
+
+const l = bunyan.createLogger({
+  name: process.env.APP_ID,
   level: process.env.LOG_LEVEL
 });
-
 const app = new express();
 
 export default class ExpressServer {
   constructor() {
-    this._l = new Logger(this.constructor.name);
     const root = path.normalize(__dirname + '/../..');
     app.set('appPath', root + 'client');
     app.use(bodyParser.json());
@@ -32,8 +29,7 @@ export default class ExpressServer {
   }
 
   listen(port = process.env.PORT) {
-    const welcome = (port, msg) => () => this._l.info(msg,
-      `up and running in ${process.env.NODE_ENV || 'development'} @: ${os.hostname() } on port: ${port}}`);
+    const welcome = port => () => l.info(`up and running in ${process.env.NODE_ENV || 'development'} @: ${os.hostname() } on port: ${port}}`);
     http.createServer(app).listen(port, welcome(port));
     return app;
   }

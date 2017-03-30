@@ -16,13 +16,28 @@ This generator scaffolds a fully functioning REST API server complete with inter
 `yo express-no-stress myapp`
 
 ## Run
+#### Run in *development* mode:
 
 ```
 cd myapp
+npm run dev
+```
+
+#### Run in *production* mode:
+
+```
+npm compile
 npm start
 ```
 
-####Try it!
+#### Deploy to the Cloud
+e.g. CloudFoundry
+
+```
+cf push myapp
+```
+
+# Try it!
 
 - Interactive API doc at [http://localhost:3000/api](http://localhost:3000/api)
 - Static resources at [http://localhost:3000/api](http://localhost:3000/api)
@@ -45,6 +60,7 @@ npm start
 , minimalist web framework for Node.js
 - [Babel.js](https://babeljs.io/) - Use new syntax, right now without waiting for support
 - [Bunyan](https://github.com/trentm/node-bunyan) - a simple and fast JSON logging module for node.js services
+- [Backpack](https://github.com/palmerhq/backpack) -  a minimalistic build system for Node.js projects.
 - [Swagger](http://swagger.io/) - is a simple yet powerful representation of your RESTful API.
 - [SwaggerUI](http://swagger.io/) - dynamically generate beautiful documentation and sandbox from a Swagger-compliant API
 
