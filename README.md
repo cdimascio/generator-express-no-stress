@@ -6,6 +6,7 @@ generator-express-no-stress gets you up and running in seconds. It's ridiculousl
 
 This generator scaffolds a fully functioning REST API server complete with interactive documentation, API validation, structured logging, environment driven config, and more. Simply run the generator and smile :-D
 
+![](https://github.com/cdimascio/generator-express-no-stress/raw/master/assets/swagger_node.jpeg)
 
 ## Install
 
