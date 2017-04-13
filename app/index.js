@@ -64,6 +64,7 @@ module.exports = class extends Generator {
         const dest = this.destinationPath(this.name)
         const files = [
           '.env',
+          '.gitignore',
           'package.json',
           'README.md',
           'server/routes.js',
