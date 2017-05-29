@@ -11,7 +11,7 @@ module.exports = class extends Generator {
 
     this.useYarn = this.options.yarn;
     this.name = 'myapp';
-    this.description = 'My cool typescript app'
+    this.description = 'My cool app'
     this.version = '1.0.0'
     this.apiRoot = '/api/v1'
   }
@@ -65,7 +65,7 @@ module.exports = class extends Generator {
         const files = [
           'package.json',
           'README.md',
-          'server/routes.ts',
+          'server/routes.js',
           'server/common/swagger/Api.yaml',
           'public/api/index.html',
           'public/index.html',

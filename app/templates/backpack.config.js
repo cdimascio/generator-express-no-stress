@@ -1,20 +1,8 @@
 module.exports = {
-  webpack: (config, options, webpack) => {
+  webpack: (config, options) => {
     config.entry.main = [
-      './server/index.ts'
-    ]
-
-    config.resolve = {
-      extensions: [".ts", ".js", ".json"]
-    };
-
-    config.module.rules.push(
-      {
-        test: /\.ts$/,
-        loader: 'awesome-typescript-loader'
-      }
-    );
-
-    return config
-  }
-}
+      './server/index.js',
+    ];
+    return config;
+  },
+};

@@ -1,7 +1,7 @@
 {
-  "name": "generator-express-no-stress-typescript",
-  "version": "1.0.0",
-  "description": "Create awesome APIs with Typescript, ExpressJS and Swagger.",
+  "name": "generator-express-no-stress",
+  "version": "2.1.6",
+  "description": "Create awesome APIs with ExpressJS and Swagger.",
   "main": "app/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,7 +9,7 @@
   "author": "Carmine DiMascio <cdimascio@gmail.com> (https://github.com/cdimascio)",
     "repository": {
     "type": "git",
-    "url": "https://github.com/cdimascio/generator-express-no-stress-typescript"
+    "url": "https://github.com/cdimascio/generator-express-no-stress"
   },
   "license": "MIT",
   "dependencies": {
@@ -19,7 +19,6 @@
   "keywords": [
     "express",
     "generator",
-    "typescript",
     "yeoman-generator",
     "babel",
     "yarn",
