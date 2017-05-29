@@ -10,7 +10,7 @@ module.exports = class extends Generator {
     this.option('yarn');
 
     this.useYarn = this.options.yarn;
-    this.name = 'myapp';
+    this.name = this.options.appname || 'myapp';
     this.description = 'My cool app'
     this.version = '1.0.0'
     this.apiRoot = '/api/v1'
