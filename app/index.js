@@ -65,6 +65,7 @@ module.exports = class extends Generator {
         const files = [
           'package.json',
           'README.md',
+          '.env',
           'server/routes.js',
           'server/common/swagger/Api.yaml',
           'public/api/index.html',
