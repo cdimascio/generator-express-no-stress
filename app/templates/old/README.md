@@ -25,7 +25,7 @@ npm start
 e.g. CloudFoundry
 
 ```
-cf push <%= name %>
+cf push myapp
 ```
 
 ### Try It
