@@ -1,12 +1,15 @@
 # generator-express-no-stress
 
+![](https://img.shields.io/badge/status-stable-green.svg) ![](https://img.shields.io/badge/license-MIT-blue.svg)
+
 Create awesome [Express.js](www.expressjs.com) applications with best of breed tech including ES.next via [Babel.js](https://babeljs.io/), structured logging with [Bunyan](https://github.com/trentm/node-bunyan), API validation and interactive documentation via [Swagger](http://swagger.io/), environment based config with [dotenv](https://github.com/motdotla/dotenv), and [Backpack](https://github.com/palmerhq/backpack) powered builds. 
+
+![](https://github.com/cdimascio/generator-express-no-stress/raw/master/assets/swagger_node.jpeg)
 
 generator-express-no-stress gets you up and running in seconds. It's ridiculously easy to configure. Heck, just take the defaults. Start it. Write code.
 
 This generator scaffolds a fully functioning REST API server complete with interactive documentation, API validation, structured logging, environment driven config, and more. Simply run the generator and smile :-D
 
-![](https://github.com/cdimascio/generator-express-no-stress/raw/master/assets/swagger_node.jpeg)
 
 ## Install
 
