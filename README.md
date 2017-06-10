@@ -4,7 +4,7 @@
 
 Create awesome [Express.js](www.expressjs.com) applications with best of breed tech including ES.next via [Babel.js](https://babeljs.io/), structured logging with [Pino](https://github.com/pinojs/pino), API validation and interactive documentation via [Swagger](http://swagger.io/), environment based config with [dotenv](https://github.com/motdotla/dotenv), and [Backpack](https://github.com/palmerhq/backpack) powered builds. 
 
-![](https://github.com/cdimascio/generator-express-no-stress/raw/master/assets/swagger_node.jpeg)
+![](https://raw.githubusercontent.com/cdimascio/generator-express-no-stress/master/assets/swagger_node.jpeg)
 
 generator-express-no-stress gets you up and running in seconds. It's ridiculously easy to configure. Heck, just take the defaults. Start it. Write code.
 
@@ -76,13 +76,14 @@ Simply describe your APIs with Swagger and automagically get for free:
 - API validation
 
 #### Interactive API Doc
-![](https://github.com/cdimascio/generator-express-no-stress/raw/master/assets/interactive-doc1.png)
+![](https://raw.githubusercontent.com/cdimascio/generator-express-no-stress/master/assets/interactive-doc1.png)
 
 
 #### API Validation!
 Oops! I the API caller forgot to pass a `name` field, no stress, we've got this!
 
-![](https://github.com/cdimascio/generator-express-no-stress/raw/master/assets/api-validation.png)
+![](https://raw.githubusercontent.com/cdimascio/generator-express-no-stress/master/assets/api-validation.png)
+
 
 
 ### Structured Logging
@@ -91,13 +92,13 @@ Structured logging out of the box!
 
 #### raw
 
-![](https://github.com/cdimascio/generator-express-no-stress/raw/master/assets/logging-raw.png)
+![](https://raw.githubusercontent.com/cdimascio/generator-express-no-stress/master/assets/logging-raw.png)
 
 #### pretty
 
 Structured logging pretty printed by default - great for dev!
 
-![](https://github.com/cdimascio/generator-express-no-stress/raw/master/assets/logging-pretty.png)
+![](https://raw.githubusercontent.com/cdimascio/generator-express-no-stress/master/assets/logging-pretty.png)
 
 ### API Validation Example
 
@@ -189,7 +190,7 @@ paths:
 
 #### Invoke a POST request via the Interactive doc
 
-![](https://github.com/cdimascio/generator-express-no-stress/raw/master/assets/interactive-doc.png)
+![](https://raw.githubusercontent.com/cdimascio/generator-express-no-stress/master/assets/interactive-doc.png)
 
 
 
