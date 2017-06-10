@@ -112,13 +112,15 @@ Simply describe your APIs with Swagger and automatically get:
 ```json
 swagger: "2.0"
 info:
-  version: "1.0.0"
-  title: My App
-  description: My App is Cool
+  version: 1.0.0
+  title: myapp
+  description: My cool app
 basePath: /api/v1
 tags:
   - name: Examples
     description: Simple example endpoints
+  - name: Specification
+    description: The swagger API specification
 
 consumes:
   - application/json
@@ -150,14 +152,14 @@ paths:
         - Examples
       description: Create a new example
       parameters:
-        - name: body
+        - name: example
           in: body
           description: number of items to skip
           required: true
           schema: 
             $ref: "#/definitions/ExampleBody"
       responses:
-        201:
+        200:
           description: Returns all examples
 
   /examples/{id}:
@@ -176,6 +178,13 @@ paths:
         404:
           description: Example not 
 
+  /spec:
+    get:
+      tags:
+        - Specification
+      responses:
+        200:
+          description: Return the API specification
 ```
 
 #### Invoke a POST request via the Interactive doc
