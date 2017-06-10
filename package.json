@@ -20,6 +20,8 @@
     "express",
     "generator",
     "yeoman-generator",
+    "structured-logging",
+    "12-factor-apps",
     "babel",
     "yarn",
     "swagger",
