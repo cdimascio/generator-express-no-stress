@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/badge/status-stable-green.svg) ![](https://img.shields.io/badge/license-MIT-blue.svg)
 
-Create awesome [Express.js](www.expressjs.com) applications with best of breed tech including ES.next via [Babel.js](https://babeljs.io/), structured logging with [Bunyan](https://github.com/trentm/node-bunyan), API validation and interactive documentation via [Swagger](http://swagger.io/), environment based config with [dotenv](https://github.com/motdotla/dotenv), and [Backpack](https://github.com/palmerhq/backpack) powered builds. 
+Create awesome [Express.js](www.expressjs.com) applications with best of breed tech including ES.next via [Babel.js](https://babeljs.io/), structured logging with [Pino](https://github.com/pinojs/pino), API validation and interactive documentation via [Swagger](http://swagger.io/), environment based config with [dotenv](https://github.com/motdotla/dotenv), and [Backpack](https://github.com/palmerhq/backpack) powered builds. 
 
 ![](https://github.com/cdimascio/generator-express-no-stress/raw/master/assets/swagger_node.jpeg)
 
@@ -42,8 +42,8 @@ cf push myapp
 ```
 # Try it!
 
-- Interactive API doc at [http://localhost:3000/api](http://localhost:3000/api)
-- Static resources at [http://localhost:3000/api](http://localhost:3000/api)
+- Interactive API doc at [http://localhost:3000/api-explorer](http://localhost:3000/api)
+- Static resources at [http://localhost:3000/api-explorer](http://localhost:3000/api)
 
 ## Use Yarn
 
@@ -62,7 +62,7 @@ npm start
 - [Express.js](www.expressjs.com) - Fast, unopinionated
 , minimalist web framework for Node.js
 - [Babel.js](https://babeljs.io/) - Use new syntax, right now without waiting for support
-- [Bunyan](https://github.com/trentm/node-bunyan) - a simple and fast JSON logging module for node.js services
+- [Pino](https://github.com/pinojs/pino) - Extremely fast node.js logger, inspired by Bunyan. It also includes a shell utility to pretty-print its log files
 - [dotenv](https://github.com/motdotla/dotenv) - Loads environment variables from .env for nodejs projects
 - [Backpack](https://github.com/palmerhq/backpack) -  a minimalistic build system for Node.js projects.
 - [Swagger](http://swagger.io/) - is a simple yet powerful representation of your RESTful API.
@@ -157,7 +157,7 @@ paths:
           schema: 
             $ref: "#/definitions/ExampleBody"
       responses:
-        200:
+        201:
           description: Returns all examples
 
   /examples/{id}:

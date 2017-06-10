@@ -5,12 +5,8 @@ import * as http from 'http';
 import * as os from 'os';
 import cookieParser from 'cookie-parser';
 import swaggerify from './swagger';
-import bunyan from 'bunyan';
+import l from './logger';
 
-const l = bunyan.createLogger({
-  name: process.env.APP_ID,
-  level: process.env.LOG_LEVEL
-});
 const app = new express();
 
 export default class ExpressServer {

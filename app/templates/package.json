@@ -6,11 +6,11 @@
   "scripts": {
     "start": "cd build && node main",
     "compile": "node build.js && backpack build",
-    "dev": "node build.js && backpack dev | bunyan -o 'short'"
+    "dev": "node build.js && backpack dev | pino -o 'short'"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
-    "bunyan": "^1.8.5",
+    "pino": "^4.6.0",
     "cookie-parser": "^1.4.3",
     "dotenv": "^2.0.0",
     "express": "^4.14.0",

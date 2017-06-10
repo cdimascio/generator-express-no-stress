@@ -14,9 +14,10 @@ export default function (app, routes) {
       caseSensitive: false,
       strict: false
     }, {
-      apiPath: process.env.SWAGGER_API_DOCS_ROOT,
+      useBasePath: true,
+      apiPath: process.env.SWAGGER_API_SPEC,
       // Disable serving the "Api.yaml" file
-      rawFilesPath: false
+      // rawFilesPath: false
     }));
 
     app.use(middleware.parseRequest({

@@ -68,8 +68,9 @@ module.exports = class extends Generator {
           '.env',
           'server/routes.js',
           'server/common/swagger/Api.yaml',
-          'public/api/index.html',
-          'public/index.html',
+          'public/api-explorer/index.html',
+          'public/api-explorer/swagger-ui-standalone-preset.js',
+          'public/index.html'
         ];
 
         this.fs.copy(src, dest)
