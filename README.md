@@ -110,7 +110,7 @@ Simply describe your APIs with Swagger and automatically get:
 
 #### Swagger API spec
 
-```json
+```yaml
 swagger: "2.0"
 info:
   version: 1.0.0
