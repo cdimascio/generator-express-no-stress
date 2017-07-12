@@ -30,7 +30,7 @@ npm run dev
 #### Run in *production* mode:
 
 ```
-npm compile
+npm run compile
 npm start
 ```
 
