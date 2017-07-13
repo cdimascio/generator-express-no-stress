@@ -14,6 +14,7 @@ module.exports = class extends Generator {
     this.description = 'My cool app'
     this.version = '1.0.0'
     this.apiRoot = '/api/v1'
+    this.kubernetes = false
   }
 
   initializing() {
@@ -32,6 +33,10 @@ module.exports = class extends Generator {
       type: 'input',
       name: 'apiVersion',
       message: `Version [${this.version}]`
+    },{
+      type: 'confirm',
+      name: 'kubernetes',
+      message: 'Would you like to use Kubernetes with this app?'
     }];
 
     if (!this.options.appname) {
@@ -41,13 +46,14 @@ module.exports = class extends Generator {
         message: `App name [${this.name}]`
       })
     }
-    
+
     return this.prompt(prompts)
       .then(r => {
         this.name = r.name ? r.name : this.name;
         this.description = r.description ? r.description : this.description;
         this.version = r.version ? r.version : this.version;
         this.apiRoot = r.apiRoot ? r.apiRoot : this.apiRoot;
+        this.kubernetes = r.kubernetes ? r.kubernetes : this.kubernetes;
       });
   }
 
@@ -62,6 +68,7 @@ module.exports = class extends Generator {
       appStaticFiles() {
         const src = this.sourceRoot()
         const dest = this.destinationPath(this.name)
+
         const files = [
           'package.json',
           'README.md',
@@ -79,6 +86,10 @@ module.exports = class extends Generator {
           dest
         );
 
+        if(this.kubernetes){
+          this.fs.copy(this.contextRoot+"/app/kubernetes", dest+"/kubernetes")
+        }
+
         const opts = {
             name: this.name,
             title: this.name,
@@ -86,12 +97,13 @@ module.exports = class extends Generator {
             version: this.version,
             apiRoot: this.apiRoot
         }
-      
+
         files.forEach(f => {
           this.fs.copyTpl(
             this.templatePath(f),
             this.destinationPath(`${this.name}/${f}`), opts);
         });
+
       }
     }
   }
