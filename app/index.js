@@ -15,6 +15,7 @@ module.exports = class extends Generator {
     this.version = '1.0.0'
     this.apiRoot = '/api/v1'
     this.kubernetes = false
+    this.docker = false
   }
 
   initializing() {
@@ -36,7 +37,12 @@ module.exports = class extends Generator {
     },{
       type: 'confirm',
       name: 'kubernetes',
-      message: 'Would you like to use Kubernetes with this app?'
+      message: 'Would you like to include Kubernetes files with this app?'
+    }
+    ,{
+      type: 'confirm',
+      name: 'docker',
+      message: 'Would you like to include Docker files with this app?'
     }];
 
     if (!this.options.appname) {
@@ -54,6 +60,7 @@ module.exports = class extends Generator {
         this.version = r.version ? r.version : this.version;
         this.apiRoot = r.apiRoot ? r.apiRoot : this.apiRoot;
         this.kubernetes = r.kubernetes ? r.kubernetes : this.kubernetes;
+        this.docker = r.docker ? r.docker : this.docker;
       });
   }
 
@@ -88,6 +95,11 @@ module.exports = class extends Generator {
 
         if(this.kubernetes){
           this.fs.copy(this.contextRoot+"/app/kubernetes", dest+"/kubernetes")
+        }
+
+        if(this.docker){
+          this.fs.copy(this.contextRoot+"/app/docker", dest)
+          this.fs.copy(this.contextRoot+"/app/docker/.*", dest)
         }
 
         const opts = {
