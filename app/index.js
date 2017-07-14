@@ -8,14 +8,14 @@ module.exports = class extends Generator {
     super(args, opts);
     this.argument('appname', { type: String, required: false });
     this.option('yarn');
+    this.option('docker');
 
     this.useYarn = this.options.yarn;
+    this.docker = this.options.docker;
     this.name = this.options.appname || 'myapp';
     this.description = 'My cool app'
     this.version = '1.0.0'
     this.apiRoot = '/api/v1'
-    this.kubernetes = false
-    this.docker = false
   }
 
   initializing() {
@@ -34,15 +34,6 @@ module.exports = class extends Generator {
       type: 'input',
       name: 'apiVersion',
       message: `Version [${this.version}]`
-    },{
-      type: 'confirm',
-      name: 'kubernetes',
-      message: 'Would you like to include Kubernetes files with this app?'
-    }
-    ,{
-      type: 'confirm',
-      name: 'docker',
-      message: 'Would you like to include Docker files with this app?'
     }];
 
     if (!this.options.appname) {
@@ -59,8 +50,6 @@ module.exports = class extends Generator {
         this.description = r.description ? r.description : this.description;
         this.version = r.version ? r.version : this.version;
         this.apiRoot = r.apiRoot ? r.apiRoot : this.apiRoot;
-        this.kubernetes = r.kubernetes ? r.kubernetes : this.kubernetes;
-        this.docker = r.docker ? r.docker : this.docker;
       });
   }
 
@@ -92,10 +81,6 @@ module.exports = class extends Generator {
           this.templatePath('.*'),
           dest
         );
-
-        if(this.kubernetes){
-          this.fs.copy(this.contextRoot+"/app/kubernetes", dest+"/kubernetes")
-        }
 
         if(this.docker){
           this.fs.copy(this.contextRoot+"/app/docker", dest)
