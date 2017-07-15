@@ -1,32 +1,19 @@
 import l from '../../common/logger';
+import db from './examples.db.service';
 
-let id = 0;
-const examples = [
-    { id: id++, name: 'example 0' }, 
-    { id: id++, name: 'example 1' }
-];
-
-export class ExamplesService {
+class ExamplesService {
   all() {
     l.info(`${this.constructor.name}.all()`);
-    return Promise.resolve(examples);
+    return db.all();
   }
 
   byId(id) {
     l.info(`${this.constructor.name}.byId(${id})`);
-    return this.all().then(r => r[id])
+    return db.byId(id);
   }
 
   create(name) {
-    const example = {
-      id: id++,
-      name
-    };
-    
-    examples.push(example);
-    l.info(example, `${this.constructor.name}.create(${name})`);
-    
-    return Promise.resolve(example);
+    return db.insert(name);
   }
 }
 

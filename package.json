@@ -1,13 +1,13 @@
 {
   "name": "generator-express-no-stress",
-  "version": "3.1.2",
+  "version": "3.2.1",
   "description": "Create awesome APIs with ExpressJS and Swagger.",
   "main": "app/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Carmine DiMascio <cdimascio@gmail.com> (https://github.com/cdimascio)",
-    "repository": {
+  "repository": {
     "type": "git",
     "url": "https://github.com/cdimascio/generator-express-no-stress"
   },

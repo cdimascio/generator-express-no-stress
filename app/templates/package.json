@@ -20,7 +20,11 @@
   "devDependencies": {
     "babel-preset-es2017": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "babel-eslint": "^7.2.3",
     "backpack-core": "^0.2.1",
+    "eslint": "^4.2.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.7.0",
     "shelljs": "^0.7.6"
   },
   "author": "Carmine DiMascio <cdimascio@gmail.com> (https://github.com/cdimascio)"
