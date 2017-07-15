@@ -30,7 +30,7 @@ npm run dev
 #### Run in *production* mode:
 
 ```
-npm compile
+npm run compile
 npm start
 ```
 
@@ -42,8 +42,8 @@ cf push myapp
 ```
 # Try it!
 
-- Interactive API doc at [http://localhost:3000/api-explorer](http://localhost:3000/api)
-- Static resources at [http://localhost:3000/api-explorer](http://localhost:3000/api)
+- Interactive API doc at [http://localhost:3000/api-explorer](http://localhost:3000/api-explorer)
+- Static resources at [http://localhost:3000/api-explorer](http://localhost:3000/api-explorer)
 
 ## Use Yarn
 
