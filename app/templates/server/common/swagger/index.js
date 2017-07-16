@@ -38,10 +38,10 @@ export default function (app, routes) {
       mw.validateRequest());
 
     // Error handler to display the validation error as HTML
-    app.use((err, req, res, next) => {
-      res.status(err.status);
+    app.use((err, req, res, next) => { // eslint-disable-line no-unused-vars, no-shadow
+      res.status(err.status || 500);
       res.send(
-        `<h1>${err.status} Error</h1>` +
+        `<h1>${err.status || 500} Error</h1>` +
         `<pre>${err.message}</pre>`);
     });
 
