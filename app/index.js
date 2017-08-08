@@ -8,8 +8,10 @@ module.exports = class extends Generator {
     super(args, opts);
     this.argument('appname', { type: String, required: false });
     this.option('yarn');
+    this.option('docker');
 
     this.useYarn = this.options.yarn;
+    this.docker = this.options.docker;
     this.name = this.options.appname || 'myapp';
     this.description = 'My cool app'
     this.version = '1.0.0'
@@ -41,7 +43,7 @@ module.exports = class extends Generator {
         message: `App name [${this.name}]`
       })
     }
-    
+
     return this.prompt(prompts)
       .then(r => {
         this.name = r.name ? r.name : this.name;
@@ -62,6 +64,7 @@ module.exports = class extends Generator {
       appStaticFiles() {
         const src = this.sourceRoot()
         const dest = this.destinationPath(this.name)
+
         const files = [
           'package.json',
           'README.md',
@@ -79,6 +82,11 @@ module.exports = class extends Generator {
           dest
         );
 
+        if(this.docker){
+          this.fs.copy(this.contextRoot+"/app/docker", dest)
+          this.fs.copy(this.contextRoot+"/app/docker/.*", dest)
+        }
+
         const opts = {
             name: this.name,
             title: this.name,
@@ -86,12 +94,13 @@ module.exports = class extends Generator {
             version: this.version,
             apiRoot: this.apiRoot
         }
-      
+
         files.forEach(f => {
           this.fs.copyTpl(
             this.templatePath(f),
             this.destinationPath(`${this.name}/${f}`), opts);
         });
+
       }
     }
   }
