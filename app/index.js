@@ -7,8 +7,12 @@ module.exports = class extends Generator {
   constructor(args, opts) {
     super(args, opts);
     this.argument('appname', { type: String, required: false });
-    this.option('yarn');
-    this.option('docker');
+    this.option('yarn', {
+      description: 'Use Yarn as the package manager'
+    });
+    this.option('docker', {
+      description: 'Install Docker artifacts including a Dockerfile'
+    });
 
     this.useYarn = this.options.yarn;
     this.docker = this.options.docker;
