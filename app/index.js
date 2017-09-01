@@ -76,16 +76,18 @@ module.exports = class extends Generator {
           'public/index.html'
         ];
 
-        this.fs.copy(src, dest)
+        const copyOpts = this.docker 
+          ? null 
+          : { 
+          globOptions: {
+            ignore: '**/+(Dockerfile|.dockerignore)'
+          }
+        };
+        this.fs.copy(src, dest, copyOpts)
         this.fs.copy(
           this.templatePath('.*'),
-          dest
+          dest, copyOpts
         );
-
-        if(this.docker){
-          this.fs.copy(this.contextRoot+"/app/docker", dest)
-          this.fs.copy(this.contextRoot+"/app/docker/.*", dest)
-        }
 
         const opts = {
             name: this.name,
@@ -100,7 +102,6 @@ module.exports = class extends Generator {
             this.templatePath(f),
             this.destinationPath(`${this.name}/${f}`), opts);
         });
-
       }
     }
   }
