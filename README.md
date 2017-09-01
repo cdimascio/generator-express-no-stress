@@ -57,6 +57,17 @@ cd myapp
 npm start
 ```
 
+## CLI Options
+
+```shell
+yo express-no-stress [appname] [--yarn] [--docker]
+```
+
+| Option | default | Description |
+| --- | --- | --- |
+| `appname` | myapp | The application folder |
+| `--yarn` | | Use the [`yarn`](https://yarnpkg.com) package manager, instead of `npm` |
+| `--docker` | | Install [Docker](https://www.docker.com/) artifacts including a Dockerfile |
 
 ## What you get!
 

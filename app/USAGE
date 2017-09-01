@@ -1,15 +1,10 @@
 Description:
-    Creates a default Swagger enabled ExpressJS app
+    Scaffolds a 12-factor Swagger enabled ExpressJS application.
 
 Example:
-    yo express-no-stress [--yarn]
+    yo express-no-stress [appname] [--yarn] [--docker]
 
-    This will create:
-        myapp/.babelrc
-        myapp/.env
-        myapp/.gitignore
-        README.md
-        index.js
-        package.json
-        public/
-        server/
+Then:
+    Navigate to appname e.g. `cd myapp/`
+    Run `npm run dev`
+    Browse to http://localhost:3000
