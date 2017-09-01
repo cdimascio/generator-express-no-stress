@@ -13,16 +13,16 @@
     "cookie-parser": "^1.4.3",
     "dotenv": "^4.0.0",
     "express": "^4.15.3",
-    "pino": "^4.7.0",
+    "pino": "^4.7.1",
     "source-map-support": "^0.4.15",
     "swagger-express-middleware": "^1.0.0-alpha.12"
   },
   "devDependencies": {
-    "babel-preset-env": "^1.6.0",
     "babel-eslint": "^7.2.3",
-    "backpack-core": "^0.4.0-rc1",
-    "eslint": "^4.2.0",
-    "eslint-config-airbnb-base": "^11.2.0",
+    "babel-preset-env": "^1.6.0",
+    "backpack-core": "^0.4.2",
+    "eslint": "^4.5.0",
+    "eslint-config-airbnb-base": "^11.3.2",
     "eslint-plugin-import": "^2.7.0",
     "shelljs": "^0.7.8"
   },
