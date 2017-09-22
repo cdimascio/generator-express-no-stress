@@ -74,6 +74,7 @@ module.exports = class extends Generator {
           'README.md',
           '.env',
           'server/routes.js',
+          'test/examples.controller.js',
           'server/common/swagger/Api.yaml',
           'public/api-explorer/index.html',
           'public/api-explorer/swagger-ui-standalone-preset.js',

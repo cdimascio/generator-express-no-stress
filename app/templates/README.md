@@ -21,6 +21,12 @@ npm run compile
 npm start
 ```
 
+#### Run tests:
+
+```
+npm test
+```
+
 #### Deploy to the Cloud
 e.g. CloudFoundry
 
