@@ -40,6 +40,13 @@ e.g. CloudFoundry
 ```
 cf push myapp
 ```
+
+## Test
+
+```
+npm test
+```
+
 # Try it!
 
 - Interactive API doc at [http://localhost:3000/api-explorer](http://localhost:3000/api-explorer)
