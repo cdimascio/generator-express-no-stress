@@ -47,6 +47,10 @@ cf push myapp
 npm test
 ```
 
+## Debug
+
+Run `npm run debug` and attach your favourite inspector!
+
 # Try it!
 
 - Interactive API doc at [http://localhost:3000/api-explorer](http://localhost:3000/api-explorer)
