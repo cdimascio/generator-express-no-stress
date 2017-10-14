@@ -1,8 +1,8 @@
 import Express from 'express';
-import * as path from 'path';
-import * as bodyParser from 'body-parser';
-import * as http from 'http';
-import * as os from 'os';
+import path from 'path';
+import bodyParser from 'body-parser';
+import http from 'http';
+import os from 'os';
 import cookieParser from 'cookie-parser';
 import swaggerify from './swagger';
 import l from './logger';
@@ -11,7 +11,7 @@ const app = new Express();
 
 export default class ExpressServer {
   constructor() {
-    const root = path.normalize(`${__dirname}/../..`);
+    const root = path.normalize('./server/common/../..');
     app.set('appPath', `${root}client`);
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));

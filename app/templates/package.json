@@ -4,9 +4,9 @@
   "description": "<%= description %>",
   "main": "index.js",
   "scripts": {
-    "start": "cd build && node main",
-    "compile": "node build.js && backpack build",
-    "dev": "node build.js && backpack dev | pino -o 'short'",
+    "start": "node --experimental-modules index.mjs",
+    "dev": "nodemon --experimental-modules index.mjs | pino -o 'short'",
+    "debug": "nodemon --experimental-modules index.mjs --inspect-brk | pino -o 'short'",
     "test": "node build.js && _mocha --compilers js:babel-register"
   },
   "dependencies": {
@@ -15,18 +15,15 @@
     "dotenv": "^4.0.0",
     "express": "^4.15.3",
     "pino": "^4.7.1",
-    "source-map-support": "^0.4.15",
     "swagger-express-middleware": "^1.0.0-alpha.12"
   },
   "devDependencies": {
-    "babel-eslint": "^7.2.3",
-    "babel-preset-env": "^1.6.0",
-    "backpack-core": "^0.4.2",
     "chai": "^4.1.2",
     "eslint": "^4.5.0",
     "eslint-config-airbnb-base": "^11.3.2",
     "eslint-plugin-import": "^2.7.0",
     "mocha": "^3.5.3",
+    "nodemon": "^1.12.1",
     "shelljs": "^0.7.8",
     "supertest": "^3.0.0"
   },
