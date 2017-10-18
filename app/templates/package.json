@@ -10,20 +10,20 @@
     "test": "node build.js && _mocha --compilers js:babel-register"
   },
   "dependencies": {
-    "body-parser": "^1.17.2",
+    "body-parser": "^1.18.2",
     "cookie-parser": "^1.4.3",
     "dotenv": "^4.0.0",
-    "express": "^4.15.3",
-    "pino": "^4.7.1",
+    "express": "^4.16.2",
+    "pino": "^4.7.3",
     "source-map-support": "^0.4.15",
     "swagger-express-middleware": "^1.0.0-alpha.12"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
-    "babel-preset-env": "^1.6.0",
-    "backpack-core": "^0.4.2",
+    "babel-preset-env": "^1.6.1",
+    "backpack-core": "^0.4.3",
     "chai": "^4.1.2",
-    "eslint": "^4.5.0",
+    "eslint": "^4.9.0",
     "eslint-config-airbnb-base": "^11.3.2",
     "eslint-plugin-import": "^2.7.0",
     "mocha": "^3.5.3",
