@@ -12,6 +12,7 @@ This generator scaffolds a fully functioning REST API server complete with inter
 
 
 ## Install
+*Requires Node 6 or greater*
 
 `npm install -g yo generator-express-no-stress`
 
