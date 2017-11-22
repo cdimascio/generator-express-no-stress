@@ -1,13 +1,13 @@
 {
-  "name": "<%= name %>",
-  "version": "<%= version %>",
-  "description": "<%= description %>",
+  "name": "myapp",
+  "version": "1.0.0",
+  "description": "My cool app",
   "main": "index.js",
   "scripts": {
     "start": "cd build && node main",
     "compile": "node build.js && backpack build",
     "dev": "node build.js && backpack dev | pino -o 'short'",
-    "test": "node build.js && _mocha --compilers js:babel-register"
+    "test": "node build.js && _mocha --compilers js:babel-register --exit"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
@@ -23,10 +23,10 @@
     "babel-preset-env": "^1.6.1",
     "backpack-core": "^0.4.3",
     "chai": "^4.1.2",
-    "eslint": "^4.9.0",
+    "eslint": "^4.11.0",
     "eslint-config-airbnb-base": "^11.3.2",
     "eslint-plugin-import": "^2.7.0",
-    "mocha": "^3.5.3",
+    "mocha": "^4.0.1",
     "shelljs": "^0.7.8",
     "supertest": "^3.0.0"
   },
