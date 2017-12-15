@@ -1,7 +1,7 @@
 {
-  "name": "myapp",
-  "version": "1.0.0",
-  "description": "My cool app",
+  "name": "<%= name %>",
+  "version": "<%= version %>",
+  "description": "<%= description %>",
   "main": "index.js",
   "scripts": {
     "start": "cd build && node main",
