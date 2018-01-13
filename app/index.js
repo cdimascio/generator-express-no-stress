@@ -78,7 +78,8 @@ module.exports = class extends Generator {
           'server/common/swagger/Api.yaml',
           'public/api-explorer/index.html',
           'public/api-explorer/swagger-ui-standalone-preset.js',
-          'public/index.html'
+          'public/index.html',
+          'tgitignore'
         ];
 
         const copyOpts = this.docker 
@@ -109,9 +110,9 @@ module.exports = class extends Generator {
             this.destinationPath(`${this.name}/${f}`), opts);
         });
 
-        this.fs.copyTpl(
-          this.destinationPath(`${this.name}/gitignore`),
-          this.destinationPath(`${this.name}/.gitignore`)
+        this.fs.move(
+          this.destinationPath(`${this.name}`, 'tgitignore'),
+          this.destinationPath(`${this.name}`, '.gitignore')
         );
       }
     }
