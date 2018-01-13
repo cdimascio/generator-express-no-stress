@@ -102,11 +102,17 @@ module.exports = class extends Generator {
             apiRoot: this.apiRoot
         }
 
+
         files.forEach(f => {
           this.fs.copyTpl(
             this.templatePath(f),
             this.destinationPath(`${this.name}/${f}`), opts);
         });
+
+        this.fs.copyTpl(
+          this.destinationPath(`${this.name}/gitignore`),
+          this.destinationPath(`${this.name}/.gitignore`)
+        );
       }
     }
   }
