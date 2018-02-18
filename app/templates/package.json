@@ -7,16 +7,15 @@
     "start": "cd build && node main",
     "compile": "node build.js && backpack build",
     "dev": "node build.js && backpack dev | pino -o 'short'",
-    "debug": "node build.js && backpack dev --inspect-brk | pino -o 'short'",    
+    "debug": "node build.js && backpack dev --inspect-brk | pino -o 'short'",
     "test": "node build.js && _mocha --compilers js:babel-register --exit"
-    
   },
   "dependencies": {
     "body-parser": "^1.18.2",
     "cookie-parser": "^1.4.3",
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
-    "pino": "^4.7.3",
+    "pino": "^4.11.0",
     "source-map-support": "^0.4.15",
     "swagger-express-middleware": "^1.0.0-alpha.12"
   },
@@ -25,12 +24,13 @@
     "babel-preset-env": "^1.6.1",
     "backpack-core": "^0.4.3",
     "chai": "^4.1.2",
-    "eslint": "^4.11.0",
+    "eslint": "^4.18.0",
     "eslint-config-airbnb-base": "^11.3.2",
     "eslint-plugin-import": "^2.7.0",
     "mocha": "^4.0.1",
     "shelljs": "^0.7.8",
     "supertest": "^3.0.0"
   },
-  "author": "Carmine DiMascio <cdimascio@gmail.com> (https://github.com/cdimascio)"
+  "author":
+    "Carmine DiMascio <cdimascio@gmail.com> (https://github.com/cdimascio)"
 }
