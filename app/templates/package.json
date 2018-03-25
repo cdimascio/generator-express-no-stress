@@ -16,7 +16,7 @@
     "dotenv": "^5.0.1",
     "express": "^4.16.2",
     "pino": "^4.15.0",
-    "source-map-support": "^0.4.15",
+    "source-map-support": "^0.5.4",
     "swagger-express-middleware": "^1.0.0-alpha.12"
   },
   "devDependencies": {
