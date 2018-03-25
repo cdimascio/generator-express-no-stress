@@ -13,22 +13,22 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "cookie-parser": "^1.4.3",
-    "dotenv": "^4.0.0",
+    "dotenv": "^5.0.1",
     "express": "^4.16.2",
-    "pino": "^4.11.0",
+    "pino": "^4.15.0",
     "source-map-support": "^0.4.15",
     "swagger-express-middleware": "^1.0.0-alpha.12"
   },
   "devDependencies": {
-    "babel-eslint": "^7.2.3",
+    "babel-eslint": "^8.2.2",
     "babel-preset-env": "^1.6.1",
-    "backpack-core": "^0.4.3",
+    "backpack-core": "^0.7.0",
     "chai": "^4.1.2",
-    "eslint": "^4.18.0",
+    "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^11.3.2",
     "eslint-plugin-import": "^2.7.0",
-    "mocha": "^4.0.1",
-    "shelljs": "^0.7.8",
+    "mocha": "^5.0.5",
+    "shelljs": "^0.8.1",
     "supertest": "^3.0.0"
   },
   "author":
