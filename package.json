@@ -1,6 +1,6 @@
 {
   "name": "generator-express-no-stress",
-  "version": "3.5.1",
+  "version": "3.5.2",
   "description": "Create awesome APIs with ExpressJS and Swagger.",
   "main": "app/index.js",
   "scripts": {
@@ -13,7 +13,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "yeoman-generator": "^2.0.2"
+    "yeoman-generator": "^2.0.5"
   },
   "devDependencies": {},
   "keywords": [
