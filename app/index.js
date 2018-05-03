@@ -86,7 +86,7 @@ module.exports = class extends Generator {
           ? null
           : {
               globOptions: {
-                ignore: '**/+(Dockerfile|.dockerignore)',
+                ignore: ['**/+(Dockerfile|.dockerignore)'],
               },
             };
         this.fs.copy(src, dest, copyOpts);
