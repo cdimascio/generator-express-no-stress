@@ -24,6 +24,7 @@
     "babel-preset-env": "^1.6.1",
     "backpack-core": "^0.7.0",
     "chai": "^4.1.2",
+    "copy-webpack-plugin": "^4.5.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^11.3.2",
     "eslint-plugin-import": "^2.7.0",
@@ -31,6 +32,5 @@
     "shelljs": "^0.8.1",
     "supertest": "^3.0.0"
   },
-  "author":
-    "Carmine DiMascio <cdimascio@gmail.com> (https://github.com/cdimascio)"
+  "author": "Carmine DiMascio <cdimascio@gmail.com> (https://github.com/cdimascio)"
 }
