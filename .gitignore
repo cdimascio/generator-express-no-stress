@@ -6,3 +6,4 @@ yarn.lock
 yarn-error.log
 /api-old
 .DS_Store
+/assets/lg
