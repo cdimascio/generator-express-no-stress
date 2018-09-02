@@ -1,6 +1,6 @@
 {
   "name": "generator-express-no-stress",
-  "version": "3.5.4",
+  "version": "4.0.0",
   "description": "Create awesome APIs with ExpressJS and Swagger.",
   "main": "app/index.js",
   "scripts": {
