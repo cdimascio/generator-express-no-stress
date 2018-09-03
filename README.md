@@ -22,8 +22,8 @@ _Requires Node 8 or greater_
 npm install -g yo generator-express-no-stress
 ```
 
-- See [here](##cli-options) for use with Yarn and/or Docker
-- See [here](#node-6) for Node 6 support
+- See [here](#usage-cli) for use with Yarn and/or Docker
+- See [here](#faqs) for Node 6 support
 
 ## Scaffold
 
