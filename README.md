@@ -1,8 +1,8 @@
 # generator-express-no-stress
 
-![](https://img.shields.io/badge/status-stable-green.svg) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/56c006ccc44c47f49d12b6b35fcf35da)](https://www.codacy.com/app/cdimascio/generator-express-no-stress?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cdimascio/generator-express-no-stress&amp;utm_campaign=Badge_Grade) ![](https://img.shields.io/badge/license-MIT-blue.svg)
+![](https://img.shields.io/badge/status-stable-green.svg) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/56c006ccc44c47f49d12b6b35fcf35da)](https://www.codacy.com/app/cdimascio/generator-express-no-stress?utm_source=github.com&utm_medium=referral&utm_content=cdimascio/generator-express-no-stress&utm_campaign=Badge_Grade) ![](https://img.shields.io/badge/license-MIT-blue.svg)
 
-Create awesome [Express.js](www.expressjs.com) applications with best of breed tech including ES.next via [Babel.js](https://babeljs.io/), structured logging with [Pino](https://github.com/pinojs/pino), API validation and interactive documentation via [Swagger](http://swagger.io/), environment based config with [dotenv](https://github.com/motdotla/dotenv), linting with [ESLint](http://eslint.org/), and [Backpack](https://github.com/palmerhq/backpack) powered builds. 
+Create awesome [Express.js](www.expressjs.com) applications with best of breed tech including ES.next via [Babel.js](https://babeljs.io/), structured logging with [Pino](https://github.com/pinojs/pino), API validation and interactive documentation via [Swagger](http://swagger.io/), environment based config with [dotenv](https://github.com/motdotla/dotenv), and linting with [ESLint](http://eslint.org/).
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/cdimascio/generator-express-no-stress/master/assets/express-no-stress-logo-v.png">
@@ -12,32 +12,53 @@ generator-express-no-stress gets you up and running in seconds. It's ridiculousl
 
 This generator scaffolds a fully functioning REST API server complete with interactive documentation, API validation, structured logging, environment driven config, and more. Simply run the generator and smile :-D
 
-
 ## Install
-*Requires Node 6 or greater*
 
-`npm install -g yo generator-express-no-stress`
+_Requires Node 8 or greater_
+
+```shell
+npm install -g yo generator-express-no-stress
+```
+
+See [here](#node-6) for Node 6 support
 
 ## Scaffold
 
-`yo express-no-stress myapp`
+```shell
+yo express-no-stress myapp
+```
 
 ## Run
-#### Run in *development* mode:
 
-```
+#### Run in _development_ mode:
+
+```shell
 cd myapp
 npm run dev
 ```
 
-#### Run in *production* mode:
+#### Run in _production_ mode:
 
-```
+```shell
 npm run compile
 npm start
 ```
 
+#### Run the tests
+
+```shell
+npm test
+```
+
+```shell
+npm run lint
+
+# or lint and fix
+npm run lint:fix
+```
+
 #### Deploy to the Cloud
+
 e.g. CloudFoundry
 
 ```
@@ -59,12 +80,11 @@ Run `npm run debug` and attach your favourite inspector!
 - Interactive API doc at [http://localhost:3000/api-explorer](http://localhost:3000/api-explorer)
 - Landing page at [http://localhost:3000](http://localhost:3000)
 
-
 ## Use Yarn
 
 ```
 # scaffold
-yo express-no-stress myapp --yarn 
+yo express-no-stress myapp --yarn
 
 # start
 cd myapp
@@ -77,45 +97,43 @@ npm start
 yo express-no-stress [appname] [--yarn] [--docker]
 ```
 
-| Option | default | Description |
-| --- | --- | --- |
-| `appname` | myapp | The application folder |
-| `--yarn` | | Use the [`yarn`](https://yarnpkg.com) package manager, instead of `npm` |
-| `--docker` | | Install [Docker](https://www.docker.com/) artifacts including a Dockerfile |
+| Option     | default | Description                                                                |
+| ---------- | ------- | -------------------------------------------------------------------------- |
+| `appname`  | myapp   | The application folder                                                     |
+| `--yarn`   |         | Use the [`yarn`](https://yarnpkg.com) package manager, instead of `npm`    |
+| `--docker` |         | Install [Docker](https://www.docker.com/) artifacts including a Dockerfile |
 
 ## What you get!
 
 - [Express.js](www.expressjs.com) - Fast, unopinionated
-, minimalist web framework for Node.js
+  , minimalist web framework for Node.js
 - [Babel.js](https://babeljs.io/) - Use new syntax, right now without waiting for support
 - [Pino](https://github.com/pinojs/pino) - Extremely fast node.js logger, inspired by Bunyan. It also includes a shell utility to pretty-print its log files
 - [dotenv](https://github.com/motdotla/dotenv) - Loads environment variables from .env for nodejs projects
-- [Backpack](https://github.com/palmerhq/backpack) -  a minimalistic build system for Node.js projects.
 - [ESLint](http://eslint.org/) - a pluggable linting utility for JavaScript and JSX
 - [Swagger](http://swagger.io/) - is a simple yet powerful representation of your RESTful API.
 - [SwaggerUI](http://swagger.io/) - dynamically generate beautiful documentation and sandbox from a Swagger-compliant API
 
-
 ### API Validation
 
 Simply describe your APIs with Swagger and automagically get for free:
+
 - Interactive documentation
 - API validation
 
 #### Interactive API Doc
+
 ![](https://raw.githubusercontent.com/cdimascio/generator-express-no-stress/master/assets/interactive-doc1.png)
 
-
 #### API Validation!
+
 Oops! I the API caller forgot to pass a `name` field, no stress, we've got this!
 
 ![](https://raw.githubusercontent.com/cdimascio/generator-express-no-stress/master/assets/api-validation.png)
 
-
-
 ### Structured Logging
 
-Structured logging out of the box! 
+Structured logging out of the box!
 
 #### raw
 
@@ -130,6 +148,7 @@ Structured logging pretty printed by default - great for dev!
 ### API Validation Example
 
 Simply describe your APIs with Swagger and automatically get:
+
 - API request validation
 - Interactive documentation
 
@@ -138,7 +157,7 @@ Simply describe your APIs with Swagger and automatically get:
 #### Swagger API spec
 
 ```yaml
-swagger: "2.0"
+swagger: '2.0'
 info:
   version: 1.0.0
   title: myapp
@@ -184,8 +203,8 @@ paths:
           in: body
           description: number of items to skip
           required: true
-          schema: 
-            $ref: "#/definitions/ExampleBody"
+          schema:
+            $ref: '#/definitions/ExampleBody'
       responses:
         200:
           description: Returns all examples
@@ -204,7 +223,7 @@ paths:
         200:
           description: Return the example with the specified id
         404:
-          description: Example not 
+          description: Example not
 
   /spec:
     get:
@@ -219,10 +238,23 @@ paths:
 
 ![](https://raw.githubusercontent.com/cdimascio/generator-express-no-stress/master/assets/interactive-doc.png)
 
-
 ### Linting
 
-express-no-stress uses [ESLint](http://eslint.org/) with a slightly modified AirBnb [base](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base) configuration. See `.eslintrc.json` to make modifications.
+express-no-stress uses [ESLint](http://eslint.org/) and provides two choices, Airbnb or Prettier.
+
+To add your own ESLint customizations, edit`.eslintrc.json`.
+
+Note that the Airbnb variant provides a slightly modified Airbnb [base](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base) configuration.
+
+## FAQs
+
+**Q**: What about Node.js 6.x?
+
+**A**:`generator-express-no-stress` now uses Babel 7. Babel 7 tooling requires Node.js 8 or greater. To use `generator-express-no-stress` with Node.js 6, install version 3.5.4.
+
+```shell
+npm install -g yo generator-express-no-stress@3.5.4
+```
 
 ## License
 
