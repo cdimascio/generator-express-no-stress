@@ -197,6 +197,7 @@ consumes:
 produces:
   - application/json
 
+
 definitions:
   ExampleBody:
     type: object
@@ -206,7 +207,7 @@ definitions:
     properties:
       name:
         type: string
-        description: The example name
+        example: no_stress
 
 paths:
   /examples:
@@ -224,10 +225,10 @@ paths:
       parameters:
         - name: example
           in: body
-          description: number of items to skip
+          description: an example
           required: true
-          schema:
-            $ref: '#/definitions/ExampleBody'
+          schema: 
+            $ref: "#/definitions/ExampleBody"
       responses:
         200:
           description: Returns all examples
@@ -240,13 +241,13 @@ paths:
         - name: id
           in: path
           required: true
-          description: The id of the entity to retrieve
+          description: The id of the example to retrieve
           type: integer
       responses:
         200:
           description: Return the example with the specified id
         404:
-          description: Example not
+          description: Example not found
 
   /spec:
     get:
