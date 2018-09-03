@@ -90,13 +90,13 @@ Copy [these contents](https://raw.githubusercontent.com/cdimascio/generator-expr
 
 ## Lint It
 
-View <% linter %> linter output
+View <%= linter %> linter output
 
 ```
 npm run lint
 ```
 
-Fix all <% linter %> linter errors
+Fix all <%= linter %> linter errors
 
 ```
 npm run lint
