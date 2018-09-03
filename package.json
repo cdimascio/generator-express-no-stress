@@ -1,7 +1,7 @@
 {
   "name": "generator-express-no-stress",
   "version": "4.0.1",
-  "description": "Create awesome APIs with ExpressJS and Swagger.",
+  "description": "Awesome APIs with ExpressJS and Swagger.",
   "main": "app/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
