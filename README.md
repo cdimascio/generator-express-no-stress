@@ -55,7 +55,7 @@ npm test
 
 ## Debug
 
-Run one of the following, then attach your favorite inspector:
+Run one of the following, then attach your favorite inspector e.g. [VSCode](#debug-in-vscode):
 
 ```shell
 # debug the server
@@ -281,4 +281,4 @@ npm install -g yo generator-express-no-stress@3.5.4
 
 ## License
 
-MIT
+[MIT](LICENSE)
