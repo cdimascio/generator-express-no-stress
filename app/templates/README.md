@@ -86,8 +86,7 @@ npm run test:debug
 
 #### Debug with VSCode
 
-Copy [these contents](https://raw.githubusercontent.com/cdimascio/generator-express-no-stress/master/assets/.vscode/launch.json) to `.vscode/launch.json`
-
+Add these [contents](https://github.com/cdimascio/generator-express-no-stress/blob/next/assets/.vscode/launch.json) to your `.vscode/launch.json` file
 ## Lint It
 
 View <%= linter %> linter output
