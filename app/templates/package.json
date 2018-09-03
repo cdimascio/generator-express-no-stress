@@ -4,8 +4,8 @@
   "description": "<% description %>",
   "main": "index.js",
   "scripts": {
-    "start": "cd build && node index.js",
-    "compile": "babel server --out-dir build --delete-dir-on-start --source-maps inline --copy-files",
+    "start": "node dist/index.js",
+    "compile": "babel server --out-dir dist --delete-dir-on-start --source-maps inline --copy-files",
     "dev": "nodemon server/ --exec babel-node | pino -o 'short'",
     "dev:debug": "nodemon server --exec babel-node --inspect | pino -o 'short'",
     "test": "mocha --compilers js:@babel/register --exit",
@@ -29,7 +29,7 @@
     "babel-eslint": "^8.2.2",
     "chai": "^4.1.2",
     "eslint": "^4.19.1",
-    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-import": "^2.14.0",
     <% if (linter === 'airbnb') { %>
     "eslint-config-airbnb-base": "^11.3.2",
     <% } else { %>
