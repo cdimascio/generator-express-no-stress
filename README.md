@@ -103,7 +103,7 @@ The sections below describe all usage options available once the project is gene
 
 ### Debug in VSCode
 
-Add these [contents](https://raw.githubusercontent.com/cdimascio/generator-express-no-stress/next/assets/.vscode/launch.json) to your `.vscode/launch.json` file
+Add these [contents](https://github.com/cdimascio/generator-express-no-stress/blob/next/assets/.vscode/launch.json) to your `.vscode/launch.json` file
 
 ### Deploy to the Cloud
 
