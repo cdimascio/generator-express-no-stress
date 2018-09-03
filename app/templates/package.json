@@ -1,13 +1,13 @@
 {
-  "name": "<% name %>",
-  "version": "<% version %>",
-  "description": "<% description %>",
+  "name": "<%= name %>",
+  "version": "<%= version %>",
+  "description": "<%= description %>",
   "main": "index.js",
   "scripts": {
     "start": "node dist/index.js",
     "compile": "babel server --out-dir dist --delete-dir-on-start --source-maps inline --copy-files",
-    "dev": "nodemon server/ --exec babel-node | pino -o 'short'",
-    "dev:debug": "nodemon server --exec babel-node --inspect | pino -o 'short'",
+    "dev": "nodemon server --exec babel-node --config .nodemonrc.json| pino -o 'short'",
+    "dev:debug": "nodemon server --exec babel-node --config .nodemonrc.json --inspect | pino -o 'short'",
     "test": "mocha --compilers js:@babel/register --exit",
     "test:debug": "mocha --compilers js:@babel/register --inspect-brk --exit",
     "lint": "eslint -c .eslintrc.json {server,test}/**",
