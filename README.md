@@ -134,7 +134,11 @@ npm start
 - [Pino](https://github.com/pinojs/pino) - Extremely fast node.js logger, inspired by Bunyan. It also includes a shell utility to pretty-print its log files
 - [dotenv](https://github.com/motdotla/dotenv) - Loads environment variables from .env for nodejs projects
 - [ESLint](http://eslint.org/) - a pluggable linting utility for JavaScript and JSX
-- [Swagger](http://swagger.io/) - is a simple yet powerful representation of your RESTful API.
+
+	Choose from the following ESLint lint rules:
+	- [Airbnb](https://github.com/airbnb/javascript) - A mostly reasonable approach to JavaScript
+	- [Prettier](https://github.com/prettier/prettier) - Prettier is an opinionated code formatter
+- [Swagger](http://swagger.io/) - is a simple yet powerful representation of your RESTful API
 - [SwaggerUI](http://swagger.io/) - dynamically generate beautiful documentation and sandbox from a Swagger-compliant API
 
 ### API Validation
