@@ -1,9 +1,12 @@
-{
-  "extends": "airbnb-base",
+<% if (linter === 'airbnb') { %>{
   "parser": "babel-eslint",
+  "extends": "airbnb-base",
   "parserOptions": {
     "sourceType": "module",
     "allowImportExportEverywhere": false
+  },
+  "env": {
+    "mocha": true
   },
   "rules": {
     "no-underscore-dangle": 0,
@@ -17,3 +20,26 @@
     }]
   }
 }
+<% } else { %>{
+    "parser": "babel-eslint",
+    "extends": ["eslint:recommended", "plugin:node/recommended", "prettier"],
+    "env": {
+      "mocha": true
+    },
+    "plugins": ["prettier", "node"],
+    "rules": {
+      "no-unused-vars": 2,
+      "node/no-unsupported-features": 0,
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true,
+          "trailingComma": "es5",
+          "bracketSpacing": true,
+          "jsxBracketSameLine": true,
+          "printWidth": 80
+        }
+      ]
+    }
+  }
+<% } %>

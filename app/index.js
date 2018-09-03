@@ -41,6 +41,15 @@ module.exports = class extends Generator {
         name: 'apiVersion',
         message: `Version [${this.version}]`,
       },
+      {
+        type: 'list',
+        name: 'linter',
+        message: `Linter`,
+        choices: [
+          { name: 'Airbnb', value: 'airbnb' },
+          { name: 'Prettier', value: 'prettier' },
+        ],
+      },
     ];
 
     if (!this.options.appname) {
@@ -56,6 +65,7 @@ module.exports = class extends Generator {
       this.description = r.description ? r.description : this.description;
       this.version = r.version ? r.version : this.version;
       this.apiRoot = r.apiRoot ? r.apiRoot.replace(/^\/?/, '/') : this.apiRoot;
+      this.linter = r.linter;
     });
   }
 
@@ -73,13 +83,14 @@ module.exports = class extends Generator {
           'package.json',
           'README.md',
           '.env',
+          '.eslintrc.json',
           'server/routes.js',
           'test/examples.controller.js',
           'server/common/swagger/Api.yaml',
           'public/api-explorer/index.html',
           'public/api-explorer/swagger-ui-standalone-preset.js',
           'public/index.html',
-          'tgitignore',
+          'gitignore',
         ];
 
         const copyOpts = this.docker
@@ -98,6 +109,7 @@ module.exports = class extends Generator {
           description: this.description,
           version: this.version,
           apiRoot: this.apiRoot,
+          linter: this.linter,
         };
 
         files.forEach(f => {
@@ -109,7 +121,7 @@ module.exports = class extends Generator {
         });
 
         this.fs.move(
-          this.destinationPath(`${this.name}`, 'tgitignore'),
+          this.destinationPath(`${this.name}`, 'gitignore'),
           this.destinationPath(`${this.name}`, '.gitignore')
         );
       },
@@ -128,5 +140,11 @@ module.exports = class extends Generator {
     }
   }
 
-  end() {}
+  end() {
+    if (this.useYarn) {
+      this.spawnCommandSync('yarn', ['lint:fix']);
+    } else {
+      this.spawnCommandSync('npm', ['run', 'lint:fix']);
+    }
+  }
 };
