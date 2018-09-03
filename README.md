@@ -10,7 +10,9 @@ Create awesome [Express.js](www.expressjs.com) applications with best of breed t
 
 generator-express-no-stress gets you up and running in seconds. It's ridiculously easy to configure. Heck, just take the defaults. Start it. Write code.
 
-This generator scaffolds a fully functioning REST API server complete with interactive documentation, API validation, structured logging, environment driven config, and more. Simply run the generator and smile :-D
+This generator scaffolds a fully functioning REST API server, complete with interactive documentation, API validation, structured logging, environment driven config, and more. Simply run the generator and smile :-D
+
+[Here's what you get!](#what-you-get)
 
 ## Install
 
@@ -20,44 +22,139 @@ _Requires Node 8 or greater_
 npm install -g yo generator-express-no-stress
 ```
 
-See [here](#node-6) for Node 6 support
+- See [here](##cli-options) for use with Yarn and/or Docker
+- See [here](#node-6) for Node 6 support
 
 ## Scaffold
 
 ```shell
 yo express-no-stress myapp
+cd myapp
 ```
 
 ## Run
 
-#### Run in _development_ mode:
+Run in _development mode_:
 
 ```shell
-cd myapp
 npm run dev
 ```
 
-#### Run in _production_ mode:
+Package and Run in _production mode_
 
 ```shell
 npm run compile
 npm start
 ```
 
-#### Run the tests
+[Debug](#run/debug-in-Development) the application
+
+## Test
 
 ```shell
 npm test
 ```
 
-```shell
-npm run lint
+[Debug](#dun/debug-tests) the tests
 
-# or lint and fix
+## Try it!
+
+- Interactive API doc at [http://localhost:3000/api-explorer](http://localhost:3000/api-explorer)
+- Landing page at [http://localhost:3000](http://localhost:3000)
+
+---
+
+## Usage: CLI
+
+```shell
+yo express-no-stress [appname] [--yarn] [--docker]
+```
+
+| Option     | default | Description                                                                |
+| ---------- | ------- | -------------------------------------------------------------------------- |
+| `appname`  | myapp   | The application folder                                                     |
+| `--yarn`   | -       | Use the [`yarn`](https://yarnpkg.com) package manager, instead of `npm`    |
+| `--docker` |         | Install [Docker](https://www.docker.com/) artifacts including a Dockerfile |
+
+## Usage: Project
+
+The sections below describe all usage options available once the project is generated/scaffolded. These details are also provided in the generated `README.md`.
+
+### npm targets
+
+| Target               | Description                                                              |
+| -------------------- | ------------------------------------------------------------------------ |
+| `npm run dev`        | Run in _development_ mode                                                |
+| `npm run dev:debug`  | Debug in _development_ mode                                              |
+| `npm run test`       | Run tests                                                                |
+| `npm run test:debug` | Deubg tests                                                              |
+| `npm run lint`       | View a listing of all errors discovered by the linter                    |
+| `npm run lint:fix`   | Fix all errors discovered by the linter                                  |
+| `npm run compile`    | Transpile source code for production use                                 |
+| `npm start`          | Run the in _production_ mode. \*Requires running `npm run compile` first |
+
+### Package and Run in Production
+
+Compile the code for production use
+
+```shell
+npm run compile
+```
+
+Run in production
+
+```shell
+npm start
+```
+
+### Run/Debug in Development
+
+Run the application
+
+```shell
+npm run dev
+```
+
+Debug the application
+
+```shell
+npm run dev:debug
+```
+
+### Run/Debug Tests
+
+Run the tests
+
+```shell
+npm test
+```
+
+Debug the tests
+
+```shell
+npm run test:debug
+```
+
+### Debug in VSCode
+
+Add these [contents](https://raw.githubusercontent.com/cdimascio/generator-express-no-stress/next/assets/.vscode/launch.json) to your `.vscode/launch.json` file
+
+### Lint/Fix
+
+View linter errors
+
+```
+shell
+npm run lint
+```
+
+Fix linter errors
+
+```shell
 npm run lint:fix
 ```
 
-#### Deploy to the Cloud
+### Deploy to the Cloud
 
 e.g. CloudFoundry
 
@@ -65,22 +162,7 @@ e.g. CloudFoundry
 cf push myapp
 ```
 
-## Test
-
-```
-npm test
-```
-
-## Debug
-
-Run `npm run debug` and attach your favourite inspector!
-
-# Try it!
-
-- Interactive API doc at [http://localhost:3000/api-explorer](http://localhost:3000/api-explorer)
-- Landing page at [http://localhost:3000](http://localhost:3000)
-
-## Use Yarn
+### Use Yarn
 
 ```
 # scaffold
@@ -91,17 +173,7 @@ cd myapp
 npm start
 ```
 
-## CLI Options
-
-```shell
-yo express-no-stress [appname] [--yarn] [--docker]
-```
-
-| Option     | default | Description                                                                |
-| ---------- | ------- | -------------------------------------------------------------------------- |
-| `appname`  | myapp   | The application folder                                                     |
-| `--yarn`   |         | Use the [`yarn`](https://yarnpkg.com) package manager, instead of `npm`    |
-| `--docker` |         | Install [Docker](https://www.docker.com/) artifacts including a Dockerfile |
+---
 
 ## What you get!
 
