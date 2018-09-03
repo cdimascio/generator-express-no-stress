@@ -40,14 +40,12 @@ Run in _development mode_:
 npm run dev
 ```
 
-Package and Run in _production mode_
+Package and run in _production mode_
 
 ```shell
 npm run compile
 npm start
 ```
-
-[Debug](#run/debug-in-Development) the application
 
 ## Test
 
@@ -55,7 +53,17 @@ npm start
 npm test
 ```
 
-[Debug](#dun/debug-tests) the tests
+## Debug
+
+Run one of the following, then attach your favorite inspector:
+
+```shell
+# debug the server
+npm run dev:debug
+
+# debug the tests
+npm run test:debug
+```
 
 ## Try it!
 
@@ -78,7 +86,7 @@ yo express-no-stress [appname] [--yarn] [--docker]
 
 ## Usage: Project
 
-The sections below describe all usage options available once the project is generated/scaffolded. These details are also provided in the generated `README.md`.
+The sections below describe all usage options available once the project is generated/scaffolded.
 
 ### npm targets
 
@@ -93,66 +101,9 @@ The sections below describe all usage options available once the project is gene
 | `npm run compile`    | Transpile source code for production use                                 |
 | `npm start`          | Run the in _production_ mode. \*Requires running `npm run compile` first |
 
-### Package and Run in Production
-
-Compile the code for production use
-
-```shell
-npm run compile
-```
-
-Run in production
-
-```shell
-npm start
-```
-
-### Run/Debug in Development
-
-Run the application
-
-```shell
-npm run dev
-```
-
-Debug the application
-
-```shell
-npm run dev:debug
-```
-
-### Run/Debug Tests
-
-Run the tests
-
-```shell
-npm test
-```
-
-Debug the tests
-
-```shell
-npm run test:debug
-```
-
 ### Debug in VSCode
 
 Add these [contents](https://raw.githubusercontent.com/cdimascio/generator-express-no-stress/next/assets/.vscode/launch.json) to your `.vscode/launch.json` file
-
-### Lint/Fix
-
-View linter errors
-
-```
-shell
-npm run lint
-```
-
-Fix linter errors
-
-```shell
-npm run lint:fix
-```
 
 ### Deploy to the Cloud
 
