@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node dist/index.js",
     "compile": "babel server --out-dir dist --delete-dir-on-start --source-maps inline --copy-files",
-    "dev": "nodemon server --exec babel-node --config .nodemonrc.json| pino -o 'short'",
-    "dev:debug": "nodemon server --exec babel-node --config .nodemonrc.json --inspect | pino -o 'short'",
+    "dev": "nodemon server --exec babel-node --config .nodemonrc.json | pino-pretty",
+    "dev:debug": "nodemon server --exec babel-node --config .nodemonrc.json --inspect | pino-pretty",
     "test": "mocha --compilers js:@babel/register --exit",
     "test:debug": "mocha --compilers js:@babel/register --inspect-brk --exit",
     "lint": "eslint -c .eslintrc.json {server,test}/**",
@@ -16,14 +16,14 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "cookie-parser": "^1.4.3",
-    "dotenv": "^5.0.1",
+    "dotenv": "^6.0.0",
     "express": "^4.16.2",
-    "pino": "^4.17.6",
+    "pino": "^5.5.0",
     "swagger-express-middleware": "^1.0.0-alpha.12"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.0",
+    "@babel/core": "^7.0.1",
     "@babel/node": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "babel-eslint": "^8.2.2",
@@ -33,13 +33,15 @@
     <% if (linter === 'airbnb') { %>
     "eslint-config-airbnb-base": "^11.3.2",
     <% } else { %>
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-prettier": "^2.6.0",
-    "eslint-plugin-node": "^5.2.1",
-    "prettier": "^1.14.2",
+      "eslint-config-prettier": "^2.10.0",
+      "eslint-plugin-import": "^2.14.0",
+      "eslint-plugin-node": "^5.2.1",
+      "eslint-plugin-prettier": "^2.6.0",
+      "prettier": "^1.14.2",
     <% } %>
     "mocha": "^5.0.5",
     "nodemon": "^1.18.4",
+    "pino-pretty": "^2.2.0",
     "supertest": "^3.0.0"
   },
   "author": "Carmine DiMascio <cdimascio@gmail.com> (https://github.com/cdimascio)"
