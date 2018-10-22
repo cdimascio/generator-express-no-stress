@@ -95,7 +95,7 @@ The sections below describe all usage options available once the project is gene
 | `npm run dev`        | Run in _development_ mode                                                |
 | `npm run dev:debug`  | Debug in _development_ mode                                              |
 | `npm run test`       | Run tests                                                                |
-| `npm run test:debug` | Deubg tests                                                              |
+| `npm run test:debug` | Debug tests                                                              |
 | `npm run lint`       | View a listing of all errors discovered by the linter                    |
 | `npm run lint:fix`   | Fix all errors discovered by the linter                                  |
 | `npm run compile`    | Transpile source code for production use                                 |
