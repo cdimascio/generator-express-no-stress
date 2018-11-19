@@ -1,5 +1,5 @@
 FROM node:10.13-alpine
-LABEL Author Carmine DiMascio <dimascio@us.ibm.com>
+LABEL Author Carmine DiMascio <cdimascio@gmail.com>
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
