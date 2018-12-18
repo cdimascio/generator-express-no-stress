@@ -1,6 +1,6 @@
 swagger: "2.0"
 info:
-  version: "<%= version %>"
+  version: <%= version %>
   title: <%= title %>
   description: <%= description %>
 basePath: <%= apiRoot %>
