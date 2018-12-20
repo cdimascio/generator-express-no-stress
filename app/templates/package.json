@@ -18,14 +18,14 @@
     "cookie-parser": "^1.4.3",
     "dotenv": "^6.0.0",
     "express": "^4.16.4",
-    "pino": "^5.8.0",
-    "swagger-express-middleware": "^1.1.1"
+    "pino": "^5.10.2",
+    "swagger-express-middleware": "^2.0.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.1.2",
-    "@babel/core": "^7.1.2",
-    "@babel/node": "^7.0.0",
-    "@babel/preset-env": "^7.1.0",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
     "babel-eslint": "^8.2.2",
     "chai": "^4.1.2",
     "eslint": "^4.19.1",
