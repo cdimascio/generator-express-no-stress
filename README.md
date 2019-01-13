@@ -118,10 +118,17 @@ cf push myapp
 ```
 # scaffold
 yo express-no-stress myapp --yarn
-
-# start
 cd myapp
-npm start
+
+# run in development mode
+yarn run dev
+
+# run in production mode
+yarn run compile
+yarn start
+
+# test
+yarn test
 ```
 
 ---
@@ -231,7 +238,7 @@ paths:
           in: body
           description: an example
           required: true
-          schema: 
+          schema:
             $ref: "#/definitions/ExampleBody"
       responses:
         200:
