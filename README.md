@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/badge/status-stable-green.svg) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/56c006ccc44c47f49d12b6b35fcf35da)](https://www.codacy.com/app/cdimascio/generator-express-no-stress?utm_source=github.com&utm_medium=referral&utm_content=cdimascio/generator-express-no-stress&utm_campaign=Badge_Grade) ![](https://img.shields.io/badge/license-MIT-blue.svg)
 
-Create awesome [Express.js](www.expressjs.com) applications with best of breed tech including ES.next via [Babel.js](https://babeljs.io/), structured logging with [Pino](https://github.com/pinojs/pino), API validation and interactive documentation via [Swagger](http://swagger.io/), environment based config with [dotenv](https://github.com/motdotla/dotenv), and linting with [ESLint](http://eslint.org/).
+Create awesome [Express.js](http://www.expressjs.com) applications with best of breed tech including ES.next via [Babel.js](https://babeljs.io/), structured logging with [Pino](https://github.com/pinojs/pino), API validation and interactive documentation via [Swagger](http://swagger.io/), environment based config with [dotenv](https://github.com/motdotla/dotenv), and linting with [ESLint](http://eslint.org/).
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/cdimascio/generator-express-no-stress/master/assets/express-no-stress-logo-v.png">
@@ -118,17 +118,24 @@ cf push myapp
 ```
 # scaffold
 yo express-no-stress myapp --yarn
-
-# start
 cd myapp
-npm start
+
+# run in development mode
+yarn run dev
+
+# run in production mode
+yarn run compile
+yarn start
+
+# test
+yarn test
 ```
 
 ---
 
 ## What you get!
 
-- [Express.js](www.expressjs.com) - Fast, unopinionated
+- [Express.js](http://www.expressjs.com) - Fast, unopinionated
   , minimalist web framework for Node.js
 - [Babel.js](https://babeljs.io/) - Use new syntax, right now without waiting for support
 - [Pino](https://github.com/pinojs/pino) - Extremely fast node.js logger, inspired by Bunyan. It also includes a shell utility to pretty-print its log files
@@ -231,7 +238,7 @@ paths:
           in: body
           description: an example
           required: true
-          schema: 
+          schema:
             $ref: "#/definitions/ExampleBody"
       responses:
         200:
