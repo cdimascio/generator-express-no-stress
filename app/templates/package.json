@@ -8,41 +8,40 @@
     "compile": "babel server --out-dir dist --delete-dir-on-start --source-maps inline --copy-files",
     "dev": "nodemon server --exec babel-node --config .nodemonrc.json | pino-pretty",
     "dev:debug": "nodemon server --exec babel-node --config .nodemonrc.json --inspect | pino-pretty",
-    "test": "mocha --compilers js:@babel/register --exit",
-    "test:debug": "mocha --compilers js:@babel/register --inspect-brk --exit",
+    "test": "mocha --require @babel/register --exit",
+    "test:debug": "mocha --require @babel/register --inspect-brk --exit",
     "lint": "eslint -c .eslintrc.json {server,test}/**",
     "lint:fix": "eslint --fix -c .eslintrc.json {server,test}/**"
   },
   "dependencies": {
-    "body-parser": "^1.18.2",
-    "cookie-parser": "^1.4.3",
-    "dotenv": "^6.0.0",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^6.2.0",
     "express": "^4.16.4",
-    "pino": "^5.10.8",
+    "pino": "^5.11.1",
     "swagger-express-middleware": "^2.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.2.2",
+    "@babel/core": "^7.3.4",
     "@babel/node": "^7.2.2",
-    "@babel/preset-env": "^7.2.3",
-    "babel-eslint": "^8.2.2",
-    "chai": "^4.1.2",
-    "eslint": "^4.19.1",
-    "eslint-plugin-import": "^2.14.0",
+    "@babel/preset-env": "^7.3.4",
+    "babel-eslint": "^10.0.1",
+    "chai": "^4.2.0",
+    "eslint": "^5.15.1",
+    "eslint-plugin-import": "^2.16.0",
     <% if (linter === 'airbnb') { %>
-      "eslint-config-airbnb-base": "^11.3.2",
+      "eslint-config-airbnb-base": "^13.1.0",
     <% } else { %>
-      "eslint-config-prettier": "^2.10.0",
-      "eslint-plugin-import": "^2.14.0",
-      "eslint-plugin-node": "^5.2.1",
-      "eslint-plugin-prettier": "^2.6.0",
-      "prettier": "^1.16.0",
+      "eslint-config-prettier": "^4.1.0",
+      "eslint-plugin-node": "^8.0.1",
+      "eslint-plugin-prettier": "^3.0.1",
+      "prettier": "^1.16.4",
     <% } %>
-    "mocha": "^5.0.5",
-    "nodemon": "^1.18.4",
-    "pino-pretty": "^2.2.2",
-    "supertest": "^3.4.1"
+    "mocha": "^6.0.2",
+    "nodemon": "^1.18.10",
+    "pino-pretty": "^2.5.0",
+    "supertest": "^3.4.2"
   },
   "author": "Carmine DiMascio <cdimascio@gmail.com> (https://github.com/cdimascio)"
 }
