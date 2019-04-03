@@ -4,7 +4,11 @@ import * as bodyParser from 'body-parser';
 import * as http from 'http';
 import * as os from 'os';
 import cookieParser from 'cookie-parser';
+<% if (specification === 'openapi_3') { %>
+import { OpenApiValidator } from 'express-openapi-validator';
+<% } else { %>
 import swaggerify from './swagger';
+<% } %>
 import l from './logger';
 
 const app = new Express();
@@ -17,10 +21,28 @@ export default class ExpressServer {
     app.use(bodyParser.urlencoded({ extended: true, limit: process.env.REQUEST_LIMIT || '100kb' }));
     app.use(cookieParser(process.env.SESSION_SECRET));
     app.use(Express.static(`${root}/public`));
+
+    <% if (specification === 'openapi_3') { %>
+    const apiSpecPath = path.join(__dirname, 'api.yml');
+    app.use(process.env.OPENAPI_SPEC || '/spec', Express.static(apiSpecPath));
+    new OpenApiValidator({
+      apiSpecPath,
+    }).install(app);
+    <% } %>
   }
 
   router(routes) {
-    swaggerify(app, routes);
+    <% if (specification === 'openapi_3') { %>
+      routes(app);
+      app.use((err, req, res, next) => {
+        // format error
+        res.status(err.status).json({
+          errors: err.errors,
+        });
+      });
+    <% } else { %>
+      swaggerify(app, routes);
+    <% } %>
     return this;
   }
 

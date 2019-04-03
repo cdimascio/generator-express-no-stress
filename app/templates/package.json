@@ -19,7 +19,11 @@
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "pino": "^5.11.1",
+    <% if (specification === 'openapi_3') { %>
+    "express-openapi-validator": "^0.9.4"
+    <% } else { %>
     "swagger-express-middleware": "^2.0.1"
+    <% } %>
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
