@@ -6,6 +6,7 @@ import * as os from 'os';
 import cookieParser from 'cookie-parser';
 <% if (specification === 'openapi_3') { %>
 import { OpenApiValidator } from 'express-openapi-validator';
+import errorHandler from '../api/middlewares/error.handler';
 <% } else { %>
 import swaggerify from './swagger';
 <% } %>
@@ -34,12 +35,7 @@ export default class ExpressServer {
   router(routes) {
     <% if (specification === 'openapi_3') { %>
       routes(app);
-      app.use((err, req, res, next) => {
-        // format error
-        res.status(err.status).json({
-          errors: err.errors,
-        });
-      });
+      app.use(errorHandler);
     <% } else { %>
       swaggerify(app, routes);
     <% } %>

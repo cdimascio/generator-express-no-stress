@@ -45,7 +45,7 @@ module.exports = class extends Generator {
       {
         type: 'list',
         name: 'specification',
-        message: `Specification`,
+        message: `OpenAPI spec version`,
         choices: [
           { name: 'Swagger 2', value: 'swagger_2' },
           { name: 'OpenApi 3', value: 'openapi_3' },
@@ -98,8 +98,8 @@ module.exports = class extends Generator {
           'server/routes.js',
           'test/examples.controller.js',
           'server/common/api.yml',
-          'server/common/api.v2.yml',
           'server/common/server.js',
+          'server/api/middlewares/error.handler.js',
           'public/api-explorer/index.html',
           'public/api-explorer/swagger-ui-standalone-preset.js',
           'public/index.html',
@@ -111,10 +111,12 @@ module.exports = class extends Generator {
             ignore: [],
           },
         };
+
         if (this.specification === 'openapi_3') {
           copyOpts.globOptions.ignore.push('**/server/common/swagger.js');
           copyOpts.globOptions.ignore.push('**/server/common/api.v2.yml');
         } else {
+          files.push('server/common/api.v2.yml');
           copyOpts.globOptions.ignore.push('**/server/common/api.yml');
         }
         if (this.docker) {
@@ -138,7 +140,8 @@ module.exports = class extends Generator {
           this.fs.copyTpl(
             this.templatePath(f),
             this.destinationPath(`${this.name}/${f}`),
-            opts
+            opts,
+            copyOpts
           );
         });
 

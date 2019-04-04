@@ -1,5 +1,6 @@
 import middleware from 'swagger-express-middleware';
 import * as path from 'path';
+import errorHandler from '../api/middlewares/error.handler';
 
 export default function (app, routes) {
   middleware(path.join(__dirname, 'api.yml'), app, (err, mw) => {
@@ -37,15 +38,9 @@ export default function (app, routes) {
       mw.CORS(),
       mw.validateRequest());
 
-    // Error handler to display the validation error as HTML
-    // eslint-disable-next-line no-unused-vars, no-shadow
-    app.use((err, req, res, next) => {
-      res.status(err.status || 500);
-      res.send(
-        `<h1>${err.status || 500} Error</h1>` +
-        `<pre>${err.message}</pre>`);
-    });
-
     routes(app);
+
+    // eslint-disable-next-line no-unused-vars, no-shadow
+    app.use(errorHandler);
   });
 }
