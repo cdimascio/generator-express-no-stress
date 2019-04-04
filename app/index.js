@@ -48,7 +48,7 @@ module.exports = class extends Generator {
         message: `OpenAPI spec version`,
         choices: [
           { name: 'Swagger 2', value: 'swagger_2' },
-          { name: 'OpenApi 3', value: 'openapi_3' },
+          { name: 'OpenApi 3 (beta)', value: 'openapi_3' },
         ],
       },
       {
