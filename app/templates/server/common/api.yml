@@ -1,0 +1,74 @@
+openapi: 3.0.1
+info:
+  title: <%= title %>
+  description: <%= description %>
+  version: <%= version %>
+servers:
+- url: <%= apiRoot %>
+tags:
+- name: Examples
+  description: Simple example endpoints
+- name: Specification
+  description: The swagger API specification
+paths:
+  /examples:
+    get:
+      tags:
+      - Examples
+      description: Fetch all examples
+      responses:
+        200:
+          description: Returns all examples
+          content: {}
+    post:
+      tags:
+      - Examples
+      description: Create a new example
+      requestBody:
+        description: an example
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExampleBody'
+        required: true
+      responses:
+        200:
+          description: Returns all examples
+          content: {}
+  /examples/{id}:
+    get:
+      tags:
+      - Examples
+      parameters:
+      - name: id
+        in: path
+        description: The id of the example to retrieve
+        required: true
+        schema:
+          type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+          content: {}
+        404:
+          description: Example not found
+          content: {}
+  /spec:
+    get:
+      tags:
+      - Specification
+      responses:
+        200:
+          description: Return the API specification
+          content: {}
+components:
+  schemas:
+    ExampleBody:
+      title: example
+      required:
+      - name
+      type: object
+      properties:
+        name:
+          type: string
+          example: no_stress
