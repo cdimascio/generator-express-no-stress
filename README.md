@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/badge/status-stable-green.svg) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/56c006ccc44c47f49d12b6b35fcf35da)](https://www.codacy.com/app/cdimascio/generator-express-no-stress?utm_source=github.com&utm_medium=referral&utm_content=cdimascio/generator-express-no-stress&utm_campaign=Badge_Grade) ![](https://img.shields.io/badge/license-MIT-blue.svg)
 
-Create awesome [Express.js](http://www.expressjs.com) applications with best of breed tech including ES.next via [Babel.js](https://babeljs.io/), structured logging with [Pino](https://github.com/pinojs/pino), API validation and interactive documentation using an [OpenAPI 3](https://swagger.io/specification/) or [Swagger 2](http://swagger.io/) spec, environment based config with [dotenv](https://github.com/motdotla/dotenv), and linting with [ESLint](http://eslint.org/).
+Create awesome [Express.js](http://www.expressjs.com) applications with best of breed tech including ES.next via [Babel.js](https://babeljs.io/), structured logging with [Pino](https://github.com/pinojs/pino), API validation and interactive documentation using an [OpenAPI 3](https://swagger.io/specification/) or [Swagger 2](https://swagger.io/specification/v2/) spec, environment based config with [dotenv](https://github.com/motdotla/dotenv), and linting with [ESLint](http://eslint.org/).
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/cdimascio/generator-express-no-stress/master/assets/express-no-stress-logo-v.png">
@@ -142,9 +142,10 @@ yarn test
 - [dotenv](https://github.com/motdotla/dotenv) - Loads environment variables from .env for nodejs projects
 - [ESLint](http://eslint.org/) - a pluggable linting utility for JavaScript and JSX
 
-	Choose from the following ESLint lint rules:
-	- [Airbnb](https://github.com/airbnb/javascript) - A mostly reasonable approach to JavaScript
-	- [Prettier](https://github.com/prettier/prettier) - Prettier is an opinionated code formatter
+      	Choose from the following ESLint lint rules:
+      	- [Airbnb](https://github.com/airbnb/javascript) - A mostly reasonable approach to JavaScript
+      	- [Prettier](https://github.com/prettier/prettier) - Prettier is an opinionated code formatter
+
 - [Swagger](http://swagger.io/) - is a simple yet powerful representation of your RESTful API
 - [SwaggerUI](http://swagger.io/) - dynamically generate beautiful documentation and sandbox from a Swagger-compliant API
 
@@ -208,7 +209,6 @@ consumes:
 produces:
   - application/json
 
-
 definitions:
   ExampleBody:
     type: object
@@ -239,7 +239,7 @@ paths:
           description: an example
           required: true
           schema:
-            $ref: "#/definitions/ExampleBody"
+            $ref: '#/definitions/ExampleBody'
       responses:
         200:
           description: Returns all examples
