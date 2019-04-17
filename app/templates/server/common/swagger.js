@@ -16,9 +16,9 @@ export default function (app, routes) {
       caseSensitive: false,
       strict: false,
     }, {
-      useBasePath: true,
+      useBasePath: false,
       apiPath: process.env.SWAGGER_API_SPEC,
-      // Disable serving the "Api.yaml" file
+      // Disable serving the "api.yml" file
       // rawFilesPath: false
     }));
 

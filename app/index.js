@@ -100,6 +100,7 @@ module.exports = class extends Generator {
           'server/common/api.yml',
           'server/common/server.js',
           'server/api/middlewares/error.handler.js',
+          'server/api/controllers/examples/controller.js',
           'public/api-explorer/index.html',
           'public/api-explorer/swagger-ui-standalone-preset.js',
           'public/index.html',
