@@ -8,6 +8,9 @@
   "env": {
     "mocha": true
   },
+  "parserOptions": {
+    "sourceType": "module"
+  },
   "rules": {
     "no-underscore-dangle": 0,
     "class-methods-use-this": ["off"],
@@ -27,6 +30,9 @@
       "mocha": true
     },
     "plugins": ["prettier", "node"],
+    "parserOptions": {
+      "sourceType": "module"
+    },
     "rules": {
       "no-unused-vars": 2,
       "node/no-unsupported-features/es-syntax": 0,
