@@ -16,36 +16,36 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.4",
-    "dotenv": "^6.2.0",
+    "dotenv": "^7.0.0",
     "express": "^4.16.4",
-    "pino": "^5.11.1",
+    "pino": "^5.12.2",
     <% if (specification === 'openapi_3') { %>
     "express-openapi-validator": "^0.53.3"
     <% } else { %>
-    "swagger-express-middleware": "^2.0.1"
+    "swagger-express-middleware": "^2.0.2"
     <% } %>
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.3.4",
-    "@babel/node": "^7.2.2",
-    "@babel/preset-env": "^7.3.4",
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
     "babel-eslint": "^10.0.1",
     "chai": "^4.2.0",
-    "eslint": "^5.15.1",
-    "eslint-plugin-import": "^2.16.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-import": "^2.17.2",
     <% if (linter === 'airbnb') { %>
       "eslint-config-airbnb-base": "^13.1.0",
     <% } else { %>
-      "eslint-config-prettier": "^4.1.0",
-      "eslint-plugin-node": "^8.0.1",
-      "eslint-plugin-prettier": "^3.0.1",
-      "prettier": "^1.16.4",
+      "eslint-config-prettier": "^4.3.0",
+      "eslint-plugin-node": "^9.1.0",
+      "eslint-plugin-prettier": "^3.1.0",
+      "prettier": "^1.17.1",
     <% } %>
-    "mocha": "^6.0.2",
-    "nodemon": "^1.18.10",
-    "pino-pretty": "^2.5.0",
-    "supertest": "^3.4.2"
+    "mocha": "^6.1.4",
+    "nodemon": "^1.19.0",
+    "pino-pretty": "^3.0.1",
+    "supertest": "^4.0.2"
   },
   "author": "Carmine DiMascio <cdimascio@gmail.com> (https://github.com/cdimascio)"
 }
