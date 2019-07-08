@@ -4,6 +4,8 @@
 
 Create awesome [Express.js](http://www.expressjs.com) applications with best of breed tech including ES.next via [Babel.js](https://babeljs.io/), structured logging with [Pino](https://github.com/pinojs/pino), API validation and interactive documentation using an [OpenAPI 3](https://swagger.io/specification/) or [Swagger 2](https://swagger.io/specification/v2/) spec, environment based config with [dotenv](https://github.com/motdotla/dotenv), and linting with [ESLint](http://eslint.org/).
 
+[![GitHub stars](https://img.shields.io/github/stars/cdimascio/generator-express-no-stress.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/cdimascio/generator-express-no-stress/stargazers/) [![Twitter URL](https://img.shields.io/twitter/url/https/github.com/cdimascio/generator-express-no-stress.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20express-no-stress%20by%20%40CarmineDiMascio%20https%3A%2F%2Fgithub.com%2Fcdimascio%2Fgenerator-express-no-stress%20%F0%9F%91%8D)
+
 <p align="center">
 <img src="https://raw.githubusercontent.com/cdimascio/generator-express-no-stress/master/assets/express-no-stress-logo-v.png">
 </p>
