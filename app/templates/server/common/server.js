@@ -24,10 +24,15 @@ export default class ExpressServer {
     app.use(Express.static(`${root}/public`));
 
     <% if (specification === 'openapi_3') { %>
-    const apiSpecPath = path.join(__dirname, 'api.yml');
-    app.use(process.env.OPENAPI_SPEC || '/spec', Express.static(apiSpecPath));
+    const apiSpec = path.join(__dirname, 'api.yml');
+    const validateResponses = !!(
+      process.env.OPENAPI_ENABLE_RESPONSE_VALIDATION &&
+      process.env.OPENAPI_ENABLE_RESPONSE_VALIDATION.toLowerCase() === 'true'
+    );
+    app.use(process.env.OPENAPI_SPEC || '/spec', Express.static(apiSpec));
     new OpenApiValidator({
-      apiSpecPath,
+      apiSpec,
+      validateResponses,
     }).install(app);
     <% } %>
   }

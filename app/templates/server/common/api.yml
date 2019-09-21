@@ -4,25 +4,42 @@ info:
   description: <%= description %>
   version: <%= version %>
 servers:
-- url: <%= apiRoot %>
+  - url: <%= apiRoot %>
 tags:
-- name: Examples
-  description: Simple example endpoints
-- name: Specification
-  description: The swagger API specification
+  - name: Examples
+    description: Simple example endpoints
+  - name: Specification
+    description: The swagger API specification
 paths:
   /examples:
     get:
       tags:
-      - Examples
+        - Examples
       description: Fetch all examples
       responses:
         200:
-          description: Returns all examples
-          content: {}
+          description: Return the example with the specified id
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Example'
+        4XX:
+          description: Example not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        5XX:
+          description: Example not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
     post:
       tags:
-      - Examples
+        - Examples
       description: Create a new example
       requestBody:
         description: an example
@@ -32,41 +49,81 @@ paths:
               $ref: '#/components/schemas/ExampleBody'
         required: true
       responses:
-        200:
-          description: Returns all examples
-          content: {}
+        201:
+          description: Return the example with the specified id
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Example'
+        4XX:
+          description: Example not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        5XX:
+          description: Example not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
   /examples/{id}:
     get:
       tags:
-      - Examples
+        - Examples
       parameters:
-      - name: id
-        in: path
-        description: The id of the example to retrieve
-        required: true
-        schema:
-          type: integer
+        - name: id
+          in: path
+          description: The id of the example to retrieve
+          required: true
+          schema:
+            type: integer
       responses:
         200:
           description: Return the example with the specified id
-          content: {}
-        404:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Example'
+        4XX:
           description: Example not found
-          content: {}
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        5XX:
+          description: Example not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
   /spec:
     get:
       tags:
-      - Specification
+        - Specification
       responses:
         200:
           description: Return the API specification
           content: {}
 components:
   schemas:
+    Example:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 3
+        name:
+          type: string
+          example: example 3
+    Error:
+      type: object
+      additionalProperties: true
+
     ExampleBody:
       title: example
       required:
-      - name
+        - name
       type: object
       properties:
         name:
