@@ -300,3 +300,6 @@ npm install -g yo generator-express-no-stress@3.5.4
 ## License
 
 [MIT](LICENSE)
+
+
+<a href="https://www.buymeacoffee.com/m97tA5c" target="_blank"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/yellow_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
