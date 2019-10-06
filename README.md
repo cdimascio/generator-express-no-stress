@@ -12,7 +12,7 @@ Create awesome [Express.js](http://www.expressjs.com) applications with best of 
 
 generator-express-no-stress gets you up and running in seconds. It's ridiculously easy to configure. Heck, just take the defaults. Start it. Write code.
 
-This generator scaffolds a fully functioning REST API server, complete with interactive documentation, API validation, structured logging, environment driven config, and more. Simply run the generator and smile :-D
+This generator scaffolds a fully functioning REST API server, complete with interactive documentation, API request and response validation, structured logging, environment driven config, and more. Simply run the generator and smile :-D
 
 [Here's what you get!](#what-you-get)
 
@@ -157,7 +157,10 @@ yarn test
 Simply describe your APIs with Swagger and automagically get for free:
 
 - Interactive documentation
-- API validation
+- API request validation
+- API response validation (OpenAPI 3 only. Disabled by default)
+  - To enable set `OPENAPI_ENABLE_RESPONSE_VALIDATION=true` in `.env`
+  
 
 #### Interactive API Doc
 
@@ -297,3 +300,6 @@ npm install -g yo generator-express-no-stress@3.5.4
 ## License
 
 [MIT](LICENSE)
+
+
+<a href="https://www.buymeacoffee.com/m97tA5c" target="_blank"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/yellow_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
