@@ -107,6 +107,15 @@ The sections below describe all usage options available once the project is gene
 
 Add these [contents](https://github.com/cdimascio/generator-express-no-stress/blob/next/assets/.vscode/launch.json) to your `.vscode/launch.json` file
 
+### Debug in WebStorm
+
+1. Start debug in _development_ mode via `npm run dev:debug`
+2. From the "Run" menu, select "Debug"
+3. Select "Edit Configurations..."
+4. From the list of Templates on the left side of the dialog, select "Attach to Node.js/Chrome"
+5. Press the "Debug" button to attach the WebStorm debugger
+
+
 ### Deploy to the Cloud
 
 e.g. CloudFoundry
