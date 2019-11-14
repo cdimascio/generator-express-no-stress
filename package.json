@@ -1,6 +1,6 @@
 {
   "name": "generator-express-no-stress",
-  "version": "8.6.1",
+  "version": "8.6.4",
   "description": "Awesome APIs with ExpressJS and OpenAPI/Swagger: Features automatic request validation, interactive api doc, and more.",
   "main": "app/index.js",
   "scripts": {
