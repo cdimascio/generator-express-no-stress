@@ -20,7 +20,7 @@ module.exports = class extends Generator {
     this.description = 'My cool app';
     this.version = '1.0.0';
     this.apiRoot = '/api/v1';
-    this.specification = 'swagger_2';
+    this.specification = 'openapi_3';
   }
 
   initializing() {}
