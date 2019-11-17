@@ -25,7 +25,7 @@ module.exports = class extends Generator {
 
   initializing() {}
 
-  prompting() {
+  async prompting() {
     const prompts = [
       {
         type: 'input',
@@ -50,6 +50,7 @@ module.exports = class extends Generator {
           { name: 'OpenApi 3', value: 'openapi_3' },
           { name: 'Swagger 2', value: 'swagger_2' },
         ],
+        default: 'openapi_3',
       },
       {
         type: 'list',
@@ -59,6 +60,7 @@ module.exports = class extends Generator {
           { name: 'Prettier', value: 'prettier' },
           { name: 'Airbnb', value: 'airbnb' },
         ],
+        default: 'prettier',
       },
     ];
 
@@ -70,7 +72,8 @@ module.exports = class extends Generator {
       });
     }
 
-    return this.prompt(prompts).then(r => {
+    return await this.prompt(prompts).then(r => {
+      this.log('opts', JSON.stringify(r, null, 4));
       this.name = r.name ? r.name : this.name;
       this.description = r.description ? r.description : this.description;
       this.version = r.version ? r.version : this.version;
@@ -114,9 +117,11 @@ module.exports = class extends Generator {
         };
 
         if (this.specification === 'openapi_3') {
+          this.log('using oas3');
           copyOpts.globOptions.ignore.push('**/server/common/swagger.js');
           copyOpts.globOptions.ignore.push('**/server/common/api.v2.yml');
         } else {
+          this.log('using swagger2');
           files.push('server/common/api.v2.yml');
           copyOpts.globOptions.ignore.push('**/server/common/api.yml');
         }
