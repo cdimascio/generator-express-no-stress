@@ -120,6 +120,7 @@ module.exports = class extends Generator {
           copyOpts.globOptions.ignore.push(src + '/server/common/api.v2.yml');
         } else {
           files.push('server/common/api.v2.yml');
+          copyOpts.globOptions.ignore.push(src + '/server/common/oas.js');
           copyOpts.globOptions.ignore.push(src + '/server/common/api.yml');
         }
         if (!this.docker) {
