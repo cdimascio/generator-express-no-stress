@@ -6,7 +6,7 @@ export default function (app, routes) {
   return new Promise((resolve, reject) => {
     middleware(path.join(__dirname, 'api.yml'), app, (err, mw) => {
       if (err) {
-        reject(err);
+        return reject(err);
       }
       // Enable Express' case-sensitive and strict options
       // (so "/entities", "/Entities", and "/Entities/" are all different)
