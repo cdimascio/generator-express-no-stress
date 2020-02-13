@@ -31,6 +31,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "mkly",
+      "name": "Mike Lay",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/965353?v=4",
+      "profile": "http://mkly.io",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
