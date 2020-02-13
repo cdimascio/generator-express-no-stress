@@ -329,6 +329,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/amygdaloideum"><img src="https://avatars2.githubusercontent.com/u/18416252?v=4" width="100px;" alt=""/><br /><sub><b>Daniel Bornstrand</b></sub></a><br /><a href="https://github.com/cdimascio/generator-express-no-stress/commits?author=amygdaloideum" title="Code">💻</a></td>
     <td align="center"><a href="http://www.about.me/jasoncorns"><img src="https://avatars2.githubusercontent.com/u/3839416?v=4" width="100px;" alt=""/><br /><sub><b>Jason Corns</b></sub></a><br /><a href="https://github.com/cdimascio/generator-express-no-stress/commits?author=JasonAllenCorns" title="Documentation">📖</a></td>
     <td align="center"><a href="http://mkly.io"><img src="https://avatars1.githubusercontent.com/u/965353?v=4" width="100px;" alt=""/><br /><sub><b>Mike Lay</b></sub></a><br /><a href="https://github.com/cdimascio/generator-express-no-stress/commits?author=mkly" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/jodejar214"><img src="https://avatars2.githubusercontent.com/u/9385902?v=4" width="100px;" alt=""/><br /><sub><b>jodejar214</b></sub></a><br /><a href="https://github.com/cdimascio/generator-express-no-stress/commits?author=jodejar214" title="Code">💻</a></td>
   </tr>
 </table>
 
