@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "leosuncin",
+      "name": "Jaime Leonardo Suncin Cruz",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/4307697?v=4",
+      "profile": "https://github.com/leosuncin",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "generator-express-no-stress",
+  "projectOwner": "cdimascio",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
