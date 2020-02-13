@@ -10,8 +10,8 @@
     "dev:debug": "nodemon server --exec babel-node --config .nodemonrc.json --inspect | pino-pretty",
     "test": "mocha --require @babel/register --exit",
     "test:debug": "mocha --require @babel/register --inspect-brk --exit",
-    "lint": "eslint -c .eslintrc.json {server,test}/**",
-    "lint:fix": "eslint --fix -c .eslintrc.json {server,test}/**"
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
   },
   "dependencies": {
     "body-parser": "^1.19.0",
