@@ -1,6 +1,6 @@
 # 🚂 generator-express-no-stress
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![](https://img.shields.io/badge/status-stable-green.svg) ![](https://img.shields.io/npm/v/generator-express-no-stress.svg) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/56c006ccc44c47f49d12b6b35fcf35da)](https://www.codacy.com/app/cdimascio/generator-express-no-stress?utm_source=github.com&utm_medium=referral&utm_content=cdimascio/generator-express-no-stress&utm_campaign=Badge_Grade) [![](https://img.shields.io/gitter/room/cdimascio-oss/community?color=%23eb205a)](https://gitter.im/cdimascio-oss/community) ![](https://img.shields.io/badge/license-MIT-blue.svg)
@@ -328,6 +328,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/leosuncin"><img src="https://avatars1.githubusercontent.com/u/4307697?v=4" width="100px;" alt=""/><br /><sub><b>Jaime Leonardo Suncin Cruz</b></sub></a><br /><a href="https://github.com/cdimascio/generator-express-no-stress/commits?author=leosuncin" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/amygdaloideum"><img src="https://avatars2.githubusercontent.com/u/18416252?v=4" width="100px;" alt=""/><br /><sub><b>Daniel Bornstrand</b></sub></a><br /><a href="https://github.com/cdimascio/generator-express-no-stress/commits?author=amygdaloideum" title="Code">💻</a></td>
     <td align="center"><a href="http://www.about.me/jasoncorns"><img src="https://avatars2.githubusercontent.com/u/3839416?v=4" width="100px;" alt=""/><br /><sub><b>Jason Corns</b></sub></a><br /><a href="https://github.com/cdimascio/generator-express-no-stress/commits?author=JasonAllenCorns" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/uronly14me"><img src="https://avatars2.githubusercontent.com/u/5186814?v=4" width="100px;" alt=""/><br /><sub><b>Sangbeom Han</b></sub></a><br /><a href="https://github.com/cdimascio/generator-express-no-stress/commits?author=uronly14me" title="Documentation">📖</a></td>
   </tr>
 </table>
 
