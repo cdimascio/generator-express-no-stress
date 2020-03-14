@@ -13,7 +13,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "yeoman-generator": "^4.2.0"
+    "yeoman-generator": "^4.7.2"
   },
   "devDependencies": {},
   "keywords": [
