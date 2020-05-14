@@ -20,9 +20,9 @@
     "express": "^4.17.1",
     "pino": "^6.2.1",
     <% if (specification === 'openapi_3') { %>
-    "express-openapi-validator": "^3.12.7"
+    "express-openapi-validator": "^3.12.9"
     <% } else { %>
-    "swagger-express-middleware": "^2.0.4"
+    "swagger-express-middleware": "^4.0.0"
     <% } %>
   },
   "devDependencies": {
@@ -35,7 +35,7 @@
     "@babel/register": "^7.9.0",
     "babel-eslint": "^10.1.0",
     "chai": "^4.2.0",
-    "eslint": "^6.8.0",
+    "eslint": "^7.0.0",
     "eslint-plugin-import": "^2.20.2",
     <% if (linter === 'airbnb') { %>
     "eslint-config-airbnb-base": "^14.0.0",
@@ -46,7 +46,7 @@
     "prettier": "^2.0.5",
     <% } %>
     "mocha": "^7.1.2",
-    "nodemon": "^2.0.3",
+    "nodemon": "^2.0.4",
     "pino-pretty": "^4.0.0",
     "supertest": "^4.0.2"
   },
