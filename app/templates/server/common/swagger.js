@@ -2,7 +2,7 @@ import middleware from 'swagger-express-middleware';
 import * as path from 'path';
 import errorHandler from '../api/middlewares/error.handler';
 
-export default function (app, routes) {
+export default function swagger(app, routes) {
   return new Promise((resolve, reject) => {
     middleware(path.join(__dirname, 'api.yml'), app, (err, mw) => {
       if (err) {
@@ -46,7 +46,7 @@ export default function (app, routes) {
 
       // eslint-disable-next-line no-unused-vars, no-shadow
       app.use(errorHandler);
-      resolve();
+      return resolve();
     });
   });
 }
