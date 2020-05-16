@@ -296,15 +296,28 @@ To add your own ESLint customizations, edit`.eslintrc.json`.
 
 Note that the Airbnb variant provides a slightly modified Airbnb [base](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base) configuration.
 
-## FAQs
+## FAQ
+**Q**: How do I modify the example API and make it my own?
 
-**Q**: What about Node.js 6.x?
+**A**: There are two key files that enable you to customize and describe your API:
+1. `server/routes.js` - This references the implementation of all of your routes. Add as many routes as you like and point each route your express handler functions.
+2. `server/common/api.yaml` - This file contains your [OpenAPI spec](https://swagger.io/specification/). Describe your API here. It's recommended that you to declare any and all validation logic in this YAML. `express-no-stress-typescript`  uses [express-openapi-validator](https://github.com/cdimascio/express-openapi-validator) to automatically handle all API validation based on what you've defined in the spec.
 
-**A**:`generator-express-no-stress` now uses Babel 7. Babel 7 tooling requires Node.js 8 or greater. To use `generator-express-no-stress` with Node.js 6, install version 3.5.4.
+**Q:**: I previously generated an app, but I want to change the API root. How do I do this?
 
-```shell
-npm install -g yo generator-express-no-stress@3.5.4
-```
+**A**: You need to make to small changes
+  1. Modify `server/routes.js`
+  ```javascript
+     // Change your original path e.g. /api/v1/examples, to:
+     app.use('/api/v2/examples', examplesRouter);
+   ```
+
+  2. Modify `server/common/api.yaml` and update the api root:
+  ```yaml
+    # Change e.g. /api/v1 to /api/v2
+    servers:
+    - url: /api/v2   
+  ```
 
 ## License
 
