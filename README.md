@@ -303,7 +303,7 @@ Note that the Airbnb variant provides a slightly modified Airbnb [base](https://
 1. `server/routes.js` - This references the implementation of all of your routes. Add as many routes as you like and point each route your express handler functions.
 2. `server/common/api.yaml` - This file contains your [OpenAPI spec](https://swagger.io/specification/). Describe your API here. It's recommended that you to declare any and all validation logic in this YAML. `express-no-stress-typescript`  uses [express-openapi-validator](https://github.com/cdimascio/express-openapi-validator) to automatically handle all API validation based on what you've defined in the spec.
 
-**Q:**: I previously generated an app, but I want to change the API root. How do I do this?
+**Q**: I previously generated an app, but I want to change the API root. How do I do this?
 
 **A**: You need to make to small changes
   1. Modify `server/routes.js`
