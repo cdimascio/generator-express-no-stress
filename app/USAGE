@@ -1,10 +1,11 @@
 Description:
-    Scaffolds a 12-factor Swagger enabled ExpressJS application.
+    Scaffolds an API using ExpressJS and OpenAPI 3 (or Swagger 2)
+    Features automatic request/resopnse validation, interactive api doc, structured logged, and more.
 
 Example:
     yo express-no-stress [appname] [--yarn] [--docker]
 
 Then:
-    Navigate to appname e.g. `cd myapp/`
+    Navigate to appname e.g. `cd [appname]/`
     Run `npm run dev`
     Browse to http://localhost:3000
