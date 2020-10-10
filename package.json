@@ -1,6 +1,6 @@
 {
   "name": "generator-express-no-stress",
-  "version": "10.1.4",
+  "version": "10.2.0",
   "description": "Awesome APIs with ExpressJS and OpenAPI 3 (or Swagger 2): Features automatic request/resopnse validation, interactive api doc, and more.",
   "main": "app/index.js",
   "scripts": {
@@ -13,7 +13,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "yeoman-generator": "^4.11.0"
+    "yeoman-generator": "^4.12.0"
   },
   "devDependencies": {},
   "keywords": [
