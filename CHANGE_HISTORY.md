@@ -1,3 +1,10 @@
+## <small>10.2.3 (2020-11-09)</small>
+
+* chore: increment patch version ([f148ab4](https://github.com/cdimascio/generator-express-no-stress/commit/f148ab4))
+* update express-openapi-validator ([5e07854](https://github.com/cdimascio/generator-express-no-stress/commit/5e07854))
+
+
+
 ## <small>10.2.2 (2020-11-07)</small>
 
 * chore: increment minor version ([8be21b2](https://github.com/cdimascio/generator-express-no-stress/commit/8be21b2))
