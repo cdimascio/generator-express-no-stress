@@ -1,3 +1,10 @@
+## <small>10.2.4 (2020-11-29)</small>
+
+* chore: increment patch version ([661b857](https://github.com/cdimascio/generator-express-no-stress/commit/661b857))
+* update validator ([58aaa5c](https://github.com/cdimascio/generator-express-no-stress/commit/58aaa5c))
+
+
+
 ## <small>10.2.3 (2020-11-09)</small>
 
 * chore: increment patch version ([f148ab4](https://github.com/cdimascio/generator-express-no-stress/commit/f148ab4))
