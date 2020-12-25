@@ -1,3 +1,13 @@
+## <small>10.2.6 (2020-12-25)</small>
+
+* chore: increment patch version ([c3f279b](https://github.com/cdimascio/generator-express-no-stress/commit/c3f279b))
+* chore: upgrade deps ([db8f1ec](https://github.com/cdimascio/generator-express-no-stress/commit/db8f1ec))
+* fix: malformed contributors ([a14d0fd](https://github.com/cdimascio/generator-express-no-stress/commit/a14d0fd))
+* feat: node 14 ([78aeb63](https://github.com/cdimascio/generator-express-no-stress/commit/78aeb63))
+* Removed unused app setting ([694d17f](https://github.com/cdimascio/generator-express-no-stress/commit/694d17f)), closes [#60](https://github.com/cdimascio/generator-express-no-stress/issues/60)
+
+
+
 ## <small>10.2.5 (2020-12-19)</small>
 
 * chore: increment patch version ([c73e6b1](https://github.com/cdimascio/generator-express-no-stress/commit/c73e6b1))
