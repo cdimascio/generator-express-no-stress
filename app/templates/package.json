@@ -20,7 +20,7 @@
     "express": "^4.17.1",
     "pino": "^6.8.0",
     <% if (specification === 'openapi_3') { %>
-    "express-openapi-validator": "^4.9.2"
+    "express-openapi-validator": "^4.9.5"
     <% } else { %>
     "swagger-express-middleware": "^4.0.2"
     <% } %>
