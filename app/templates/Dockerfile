@@ -1,4 +1,4 @@
-FROM node:12-alpine
+FROM node:14-alpine
 LABEL Author Carmine DiMascio <cdimascio@gmail.com>
 
 RUN mkdir -p /usr/src/app
