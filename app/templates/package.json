@@ -18,9 +18,9 @@
     "cookie-parser": "^1.4.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "pino": "^6.8.0",
+    "pino": "^6.10.0",
     <% if (specification === 'openapi_3') { %>
-    "express-openapi-validator": "^4.9.5"
+    "express-openapi-validator": "^4.10.6"
     <% } else { %>
     "swagger-express-middleware": "^4.0.2"
     <% } %>
@@ -35,18 +35,18 @@
     "@babel/register": "^7.12.10",
     "babel-eslint": "^10.1.0",
     "chai": "^4.2.0",
-    "eslint": "^7.16.0",
+    "eslint": "^7.17.0",
     "eslint-plugin-import": "^2.22.1",
     <% if (linter === 'airbnb') { %>
     "eslint-config-airbnb-base": "^14.2.0",
     <% } else { %>
     "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^3.3.0",
+    "eslint-plugin-prettier": "^3.3.1",
     "prettier": "^2.2.1",
     <% } %>
     "mocha": "^8.2.1",
-    "nodemon": "^2.0.6",
+    "nodemon": "^2.0.7",
     "pino-pretty": "^4.3.0",
     "supertest": "^6.0.1"
   },
