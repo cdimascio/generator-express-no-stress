@@ -1,5 +1,4 @@
 'use strict';
-
 const Generator = require('yeoman-generator');
 const path = require('path');
 
@@ -25,7 +24,7 @@ module.exports = class extends Generator {
 
   initializing() {}
 
-  async prompting() {
+  prompting() {
     const prompts = [
       {
         type: 'input',
@@ -72,7 +71,7 @@ module.exports = class extends Generator {
       });
     }
 
-    return await this.prompt(prompts).then(r => {
+    return this.prompt(prompts).then(r => {
       this.name = r.name ? r.name : this.name;
       this.description = r.description ? r.description : this.description;
       this.version = r.version ? r.version : this.version;
@@ -168,19 +167,19 @@ module.exports = class extends Generator {
 
   install() {
     const appDir = path.join(process.cwd(), this.name);
-    process.chdir(appDir);
     if (this.useYarn) {
-      this.yarnInstall();
+      this.spawnCommandSync('yarn', ['install'], { cwd: appDir });
     } else {
-      this.npmInstall();
+      this.spawnCommandSync('npm', ['install'], { cwd: appDir });
     }
   }
 
   end() {
+    const appDir = path.join(process.cwd(), this.name);
     if (this.useYarn) {
-      this.spawnCommandSync('yarn', ['lint:fix']);
+      this.spawnCommandSync('yarn', ['lint:fix'], { cwd: appDir });
     } else {
-      this.spawnCommandSync('npm', ['run', 'lint:fix']);
+      this.spawnCommandSync('npm', ['run', 'lint:fix'], { cwd: appDir });
     }
   }
 };
