@@ -99,8 +99,7 @@ The sections below describe all usage options available once the project is gene
 | `npm run test:debug` | Debug tests                                                              |
 | `npm run lint`       | View a listing of all errors discovered by the linter                    |
 | `npm run lint:fix`   | Fix all errors discovered by the linter                                  |
-| `npm run compile`    | Transpile source code for production use                                 |
-| `npm start`          | Run the in _production_ mode. \*Requires running `npm run compile` first |
+| `npm start`          | Run the in _production_ mode. |
 
 ### Debug in VSCode
 
@@ -134,7 +133,6 @@ cd myapp
 yarn run dev
 
 # run in production mode
-yarn run compile
 yarn start
 
 # test
