@@ -21,7 +21,7 @@ This generator scaffolds a fully functioning REST API server, complete with inte
 _Requires Node 8 or greater_
 
 ```shell
-npm install -g yo generator-express-no-stress
+npm install -g yo@4.3.0 generator-express-no-stress
 ```
 
 - See [here](#usage-cli) for use with Yarn and/or Docker
@@ -45,7 +45,6 @@ npm run dev
 Package and run in _production mode_
 
 ```shell
-npm run compile
 npm start
 ```
 
