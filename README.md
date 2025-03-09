@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/badge/status-stable-green.svg) ![](https://img.shields.io/npm/v/generator-express-no-stress.svg) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/56c006ccc44c47f49d12b6b35fcf35da)](https://www.codacy.com/app/cdimascio/generator-express-no-stress?utm_source=github.com&utm_medium=referral&utm_content=cdimascio/generator-express-no-stress&utm_campaign=Badge_Grade) [![](https://img.shields.io/gitter/room/cdimascio-oss/community?color=%23eb205a)](https://gitter.im/cdimascio-oss/community) [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-) ![](https://img.shields.io/badge/license-MIT-blue.svg)
 
-Create awesome [Express.js](http://www.expressjs.com) applications with best of breed tech including ES.next via [Babel.js](https://babeljs.io/), structured logging with [Pino](https://github.com/pinojs/pino), API validation and interactive documentation using an [OpenAPI 3](https://swagger.io/specification/) or [Swagger 2](https://swagger.io/specification/v2/) spec, environment based config with [dotenv](https://github.com/motdotla/dotenv), and linting with [ESLint](http://eslint.org/).
+Create awesome [Express.js](http://www.expressjs.com) applications with best of breed tech including ES.next via [Babel.js](https://babeljs.io/), structured logging with [Pino](https://github.com/pinojs/pino), API validation and interactive documentation using an [OpenAPI 3.x](https://swagger.io/specification/), environment based config with [dotenv](https://github.com/motdotla/dotenv), and linting with [ESLint](http://eslint.org/).
 
 [![GitHub stars](https://img.shields.io/github/stars/cdimascio/generator-express-no-stress.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/cdimascio/generator-express-no-stress/stargazers/) [![Twitter URL](https://img.shields.io/twitter/url/https/github.com/cdimascio/generator-express-no-stress.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20express-no-stress%20by%20%40CarmineDiMascio%20https%3A%2F%2Fgithub.com%2Fcdimascio%2Fgenerator-express-no-stress%20%F0%9F%91%8D)
 
@@ -145,7 +145,6 @@ yarn test
 
 - [Express.js](http://www.expressjs.com) - Fast, unopinionated
   , minimalist web framework for Node.js
-- [Babel.js](https://babeljs.io/) - Use new syntax, right now without waiting for support
 - [Pino](https://github.com/pinojs/pino) - Extremely fast node.js logger, inspired by Bunyan. It also includes a shell utility to pretty-print its log files
 - [dotenv](https://github.com/motdotla/dotenv) - Loads environment variables from .env for nodejs projects
 - [ESLint](http://eslint.org/) - a pluggable linting utility for JavaScript and JSX
@@ -163,8 +162,8 @@ yarn test
 Simply describe your APIs with Swagger and automagically get for free:
 
 - Interactive documentation
-- API request validation
-- API response validation (OpenAPI 3 only. Disabled by default)
+- API request validation (OpenAPI 3.x)
+- API response validation
   - To enable set `OPENAPI_ENABLE_RESPONSE_VALIDATION=true` in `.env`
   
 
@@ -289,7 +288,7 @@ paths:
 
 express-no-stress uses [ESLint](http://eslint.org/) and provides two choices, Airbnb or Prettier.
 
-To add your own ESLint customizations, edit`.eslintrc.json`.
+To add your own ESLint customizations, edit`eslint.conf.mjs`.
 
 Note that the Airbnb variant provides a slightly modified Airbnb [base](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base) configuration.
 
