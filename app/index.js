@@ -47,7 +47,7 @@ module.exports = class extends Generator {
         message: `OpenAPI spec version`,
         choices: [
           { name: 'OpenApi 3', value: 'openapi_3' },
-          { name: 'Swagger 2', value: 'swagger_2' },
+          // { name: 'Swagger 2', value: 'swagger_2' },
         ],
         default: 'openapi_3',
       },
@@ -95,7 +95,7 @@ module.exports = class extends Generator {
           'package.json',
           'README.md',
           '.env',
-          '.eslintrc.json',
+          'eslint.config.mjs',
           'server/routes.js',
           'test/examples.controller.js',
           'server/common/api.yml',
