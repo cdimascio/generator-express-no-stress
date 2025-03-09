@@ -1,3 +1,19 @@
+##  (2025-03-09)
+
+* update README ([d55c4b8](https://github.com/cdimascio/generator-express-no-stress/commit/d55c4b8))
+* v10.2.9 ([122a409](https://github.com/cdimascio/generator-express-no-stress/commit/122a409))
+* v10.2.9 ([b81f19d](https://github.com/cdimascio/generator-express-no-stress/commit/b81f19d))
+* v10.2.9 ([634424e](https://github.com/cdimascio/generator-express-no-stress/commit/634424e))
+* v11.0.1 ([cbe87f1](https://github.com/cdimascio/generator-express-no-stress/commit/cbe87f1))
+* v6.0.0 - uses ESM, removes babel, and upgrades deps ([cdd4f73](https://github.com/cdimascio/generator-express-no-stress/commit/cdd4f73))
+
+
+
+2025-03-09
+===================
+
+
+
 ## <small>10.2.6 (2020-12-25)</small>
 
 * chore: increment patch version ([c3f279b](https://github.com/cdimascio/generator-express-no-stress/commit/c3f279b))
