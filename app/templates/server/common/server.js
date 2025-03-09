@@ -1,16 +1,21 @@
 import Express from 'express';
 import cookieParser from 'cookie-parser';
-import * as path from 'path';
-import * as bodyParser from 'body-parser';
-import * as http from 'http';
-import * as os from 'os';
-import l from './logger';<% if (specification === 'openapi_3') { %>
-import * as OpenApiValidator from 'express-openapi-validator';
-import errorHandler from '../api/middlewares/error.handler'
+import path from 'path';
+import { fileURLToPath } from 'url';
+import bodyParser from 'body-parser';
+import http from 'http';
+import os from 'os';
+import l from './logger.js';<% if (specification === 'openapi_3') { %>
+import OpenApiValidator from 'express-openapi-validator';
+import errorHandler from '../api/middlewares/error.handler.js'
 <% } else { %>
 import oas from './swagger';
 <% } %>
 const app = new Express();
+
+// Get dirname equivalent in ESM
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export default class ExpressServer {
   constructor() {

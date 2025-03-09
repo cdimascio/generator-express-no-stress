@@ -1,8 +1,6 @@
-import chai from 'chai';
+import { expect } from 'chai';
 import request from 'supertest';
-import Server from '../server';
-
-const expect = chai.expect;
+import Server from '../server/index.js';
 
 describe('Examples', () => {
   it('should get all examples', () =>
